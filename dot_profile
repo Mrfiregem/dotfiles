@@ -1,0 +1,9 @@
+#!/bin/sh
+# Sourced during login shell
+
+# Load systemd --user environment variables
+set -a
+. /dev/fd/0 <<EOF
+$(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
+EOF
+set +a

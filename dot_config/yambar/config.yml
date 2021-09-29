@@ -1,0 +1,146 @@
+nerdicon: &icon
+  font: "Symbols Nerd Font:pixelsize=14"
+  right-margin: 4
+
+bar:
+  height: 32
+  location: top
+  spacing: 5
+  margin: 7
+
+  font: "Roboto:pixelsize=12"
+  foreground: "c0caf5ff"
+  background: "414868ff"
+  border:
+    width: 2
+    color: "24283bff"
+    margin: 10
+    top-margin: 4
+    bottom-margin: 0
+
+  left:
+    - river:
+        anchors:
+          tag_string: &tagstr
+            text: "{id}"
+            right-margin: 4
+        title:
+          map:
+            tag: title
+            default:
+              string:
+                text: "- {title}"
+                max: 100
+            values:
+              "": { string: { text: "" } }
+        content:
+          map:
+            tag: focused
+            values:
+              true:
+                string:
+                  <<: *tagstr
+                  font: "Roboto:pixelsize=14:weight=bold"
+              false:
+                map:
+                  tag: occupied
+                  values:
+                    false: { empty: {} }
+                    true:
+                      string: *tagstr
+
+  center:
+    - clock:
+        font: "Roboto:pixelsize=14"
+        time-format: "%r"
+        date-format: "%Y-%m-%d"
+        content:
+          - string:
+              text: "{date}"
+              right-margin: 5
+          - string: { text: "{time}" }
+
+  right:
+    - alsa:
+        card: "default"
+        mixer: "Master"
+        anchors:
+          alsa_text: &alsatxt { text: "{percent}%" }
+        content:
+          map:
+            tag: muted
+            values:
+              false:
+                - string:
+                    <<: *icon
+                    text: "墳"
+                - string: *alsatxt
+              true:
+                - string:
+                    <<: *icon
+                    text: "婢"
+                - string: *alsatxt
+    - backlight:
+        name: "radeon_bl0"
+        content:
+          - string:
+              <<: *icon
+              text: ""
+          - string: { text: "{percent}%" }
+    - battery:
+        name: "BAT0"
+        anchors:
+          battery_text: &battxt { text: "{capacity}%" }
+        content:
+          map:
+            tag: state
+            values:
+              full:
+                - string:
+                    <<: *icon
+                    text: ""
+                - string: *battxt
+              charging:
+                - string:
+                    <<: *icon
+                    text: ""
+                - string: *battxt
+              discharging:
+                - string:
+                    <<: *icon
+                    text: ""
+                - string: *battxt
+              unknown:
+                - string:
+                    <<: *icon
+                    text: ""
+                - string: *battxt
+    - network:
+        name: "wlp5s0"
+        anchors:
+          network_text: &nettxt { text: "{name}" }
+        content:
+          map:
+            tag: state
+            default:
+              - string:
+                  <<: *icon
+                  text: "直"
+              - string: *nettxt
+            values:
+              down:
+                - string:
+                    <<: *icon
+                    text: "睊"
+                - string: *nettxt
+    - script:
+        path: '/home/cheer/code/shell/yambar-scripts/pacman.fish'
+        content:
+          - string:
+              <<: *icon
+              text: ""
+          - string: { text: "{pkgcount} |" }
+          - string:
+              <<: *icon
+              text: ""
+          - string: { text: "{updcount}" }

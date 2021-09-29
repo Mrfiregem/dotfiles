@@ -1,0 +1,11 @@
+font=sans-serif 10
+anchor=bottom-right
+
+height=200
+
+background-color=#282828
+border-color=#1d2021
+
+default-timeout=10000
+
+icon-path=/usr/share/icons/Papirus-Dark

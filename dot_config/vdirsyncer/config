@@ -1,0 +1,19 @@
+[general]
+status_path = "~/.local/share/vdirsyncer/status/"
+
+[pair main_calendar]
+a = "main_calendar_local"
+b = "main_calendar_remote"
+collections = ["from a", "from b"]
+
+[storage main_calendar_local]
+type = "filesystem"
+path = "~/.local/share/vdirsyncer/main_calendar/"
+fileext = ".ics"
+
+[storage main_calendar_remote]
+type = "caldav"
+url = "https://us.cloudamo.com/remote.php/dav/"
+username = "firinggems@gmail.com"
+password.fetch = ["command", "secret-tool", "lookup", "service", "nextcloud"]
+

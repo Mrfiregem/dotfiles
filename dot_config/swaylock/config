@@ -1,0 +1,12 @@
+ignore-empty-password
+show-failed-attempts
+indicator-caps-lock
+
+fade-in=0.5
+grace=10
+
+image=~/media/pics/walls/lock.png
+scaling=fill
+
+font=Arimo
+text-color=#ffffff
