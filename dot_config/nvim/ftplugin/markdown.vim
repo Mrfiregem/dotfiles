@@ -1,5 +1,5 @@
-set cursorline
-set conceallevel=2
-set linebreak
-set scrolloff=12
-set mouse=
+setl cursorline
+setl conceallevel=2
+setl linebreak
+setl scrolloff=12
+setl mouse=
