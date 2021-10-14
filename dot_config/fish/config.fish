@@ -20,7 +20,5 @@ fish_add_path $HOME/.local/nimble/bin
 fish_add_path $XDG_DATA_HOME/cargo/bin
 fish_add_path $HOME/.local/bin
 
-# Initialize Gnome keyring
-if status is-login
-  set -x (gnome-keyring-daemon --start | string split '=')
-end
+# SSH Agent
+eval (ssh-agent -c)
