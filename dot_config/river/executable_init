@@ -113,6 +113,8 @@ riverctl float-filter-add app-id "copyq"
 # csd app-ids
 # riverctl csd-filter-add "gedit"
 
+riverctl xcursor-theme capitaine-cursors 24
+
 # program autostart
 riverctl spawn "swaybg -m fill -i ${HOME}/media/pics/walls/wall.png"
 riverctl spawn mako
