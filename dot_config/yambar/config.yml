@@ -134,7 +134,8 @@ bar:
                     text: "睊"
                 - string: *nettxt
     - script:
-        path: '/home/cheer/code/shell/yambar-scripts/pacman.fish'
+        path: '/home/cheer/scripts/shell/pacman.fish'
+        poll-interval: 900
         content:
           - string:
               <<: *icon
