@@ -23,4 +23,6 @@ fish_add_path $XDG_DATA_HOME/cargo/bin
 fish_add_path $HOME/.local/bin
 
 # SSH Agent
-eval (ssh-agent -c)
+if status is-login
+  eval (ssh-agent -c)
+end
