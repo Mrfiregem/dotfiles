@@ -9,8 +9,8 @@ neorg.setup {
     ["core.norg.dirman"] = {
       config = {
         workspaces = {
-          main = "~/docs/neorg/main",
-          school = "~/docs/neorg/school",
+          main = "~/docs/neorg",
+          school = "~/docs/school",
         },
         autodetect = true,
         autochdir = true,
