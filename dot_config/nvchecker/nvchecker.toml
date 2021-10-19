@@ -1,5 +1,7 @@
 [__config__]
 keyfile = "~/.config/nvchecker/keyfile.toml"
+oldver = "~/.local/state/nvchecker/oldver.json"
+newver = "~/.local/state/nvchecker/newver.json"
 
 [imv-wayland]
 source = "github"
