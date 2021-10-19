@@ -4,8 +4,8 @@
 # documentation.
 
 # winkey = Mod4; basic conf
-mod="Mod4"
-alt="Mod1"
+mod='Mod4'
+alt='Mod1'
 riverctl map normal $mod Q close
 riverctl map normal $mod+Shift E exit
 
@@ -82,9 +82,9 @@ for mode in normal locked; do
   riverctl map $mode None XF86Eject spawn 'eject -T'
 
   # Control pulse audio volume with amixer
-  riverctl map $mode None XF86AudioRaiseVolume spawn "amixer sset Master 5%+"
-  riverctl map $mode None XF86AudioLowerVolume spawn "amixer sset Master 5%-"
-  riverctl map $mode None XF86AudioMute spawn "amixer sset Master toggle"
+  riverctl map $mode None XF86AudioRaiseVolume spawn 'amixer sset Master 5%+'
+  riverctl map $mode None XF86AudioLowerVolume spawn 'amixer sset Master 5%-'
+  riverctl map $mode None XF86AudioMute spawn 'amixer sset Master toggle'
 
   # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
   riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
@@ -106,9 +106,10 @@ riverctl border-width 2
 riverctl set-repeat 50 300
 
 # float app-ids
-riverctl float-filter-add app_id "float"
-riverctl float-filter-add app_id "popup"
-riverctl float-filter-add app-id "anki"
+riverctl float-filter-add app_id 'float'
+riverctl float-filter-add app_id 'popup'
+riverctl float-filter-add app-id 'anki'
+riverctl float-filter-add title 'Sharing Indicator'
 
 # Set default cursor theme
 riverctl xcursor-theme capitaine-cursors 24
