@@ -119,8 +119,9 @@ riverctl spawn mako
 riverctl spawn yambar
 riverctl spawn copyq
 riverctl spawn 'dex -a'
-riverctl spawn "/usr/lib/xdg-desktop-portal-gtk"
+riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
 riverctl spawn "${HOME}/code/shell/sway-import-gsettings"
+riverctl spawn 'dbus-update-activation-environment --systemd DISPLAY MOZ_DBUS_REMOTE'
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
