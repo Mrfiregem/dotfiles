@@ -1,0 +1,15 @@
+[__config__]
+keyfile = "~/.config/nvchecker/keyfile.toml"
+
+[taplo-cli]
+source = "cratesio"
+
+[wlopm-git]
+source = "git"
+git = "https://git.sr.ht/~leon_plickat/wlopm"
+use_commit = true
+
+[imv-wayland]
+source = "github"
+github = "eXeC64/imv"
+use_latest_tag = true
