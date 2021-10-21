@@ -145,3 +145,8 @@ bar:
               <<: *icon
               text: ""
           - string: { text: "{updcount}" }
+    - script:
+        path: '/home/cheer/scripts/shell/wttr.sh'
+        poll-interval: 1800
+        content:
+          - string: { text: "{weather}" }
