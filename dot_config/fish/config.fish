@@ -1,3 +1,8 @@
+# SSH Agent
+if status is-login
+  eval (ssh-agent -c)
+end
+
 status is-interactive; or exit
 
 # Change the colorscheme
@@ -21,8 +26,3 @@ abbr -g trr trash-restore
 fish_add_path $HOME/.local/nimble/bin
 fish_add_path $XDG_DATA_HOME/cargo/bin
 fish_add_path $HOME/.local/bin
-
-# SSH Agent
-if status is-login
-  eval (ssh-agent -c)
-end
