@@ -1,8 +1,3 @@
-# SSH Agent
-if status is-login
-  eval (ssh-agent -c)
-end
-
 status is-interactive; or exit
 
 # Change the colorscheme
