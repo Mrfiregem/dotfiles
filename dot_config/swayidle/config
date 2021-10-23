@@ -1,0 +1,3 @@
+timeout 1800 'swaylock'
+timeout 2700 'wlopm --off *' resume 'wlopm --on *'
+before-sleep 'swaylock'

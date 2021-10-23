@@ -5,7 +5,7 @@ indicator-caps-lock
 fade-in=0.5
 grace=10
 
-image=~/media/pics/walls/lock.png
+image=~/media/pics/current_lock
 scaling=fill
 
 font=Arimo
