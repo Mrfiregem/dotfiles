@@ -12,9 +12,8 @@ ts_parse.norg = {
 ts_setup.setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
   ensure_installed = {
-    "bash", "bibtex", "c", "css", "fish", "html", "javascript", "json", "jsonc",
-    "latex", "lua", "norg", "python", "regex", "rust", "toml", "vim", "yaml",
-    "zig",
+    "bash", "c", "css", "fish", "html", "javascript", "json", "jsonc", "lua",
+    "norg", "python", "regex", "rust", "toml", "vim", "yaml", "zig",
   },
   highlight = {enable = true},
   indent = {enable = true},
