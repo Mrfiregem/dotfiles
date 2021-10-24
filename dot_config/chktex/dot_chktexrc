@@ -1,34 +1,12 @@
 TabSize = 2
 
-# Here, you can put default commandline options; most users would for
-# instance like to put -v2 here.
-CmdLine
-{
-}
-
-# These  patterns  will  be  searched for through the text; no matter
-# whether   they   appear  as  normal  text,  commands  or  whatever.
-# Currently case-sensitive.  They are not found in comments.
-UserWarn
-{
-}
-[
-]
-
-#####################################################################
-#
-# Here you may specify more output formats for use with the -v option,
-# it simply indexes  into this list.  Remember to use ! instead of \,
-# though.
-#
-# For explanation of how % fields expand; look at ChkTeX.{dvi,ps,pdf}.
-#
-# We will by default select entry number _two_ in this list (we count
-# from 0), and -v without any parameter selects entry number _three_.
-#
-
 OutFormat
 {
 # -v7; gcc mode
 "%f%b%l%b%c%b %k%b %m!n"
+}
+
+Silent
+{
+  \printbibliography
 }
