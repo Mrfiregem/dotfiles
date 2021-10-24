@@ -42,12 +42,26 @@ local shellcheck = {
     "%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tote: %m",
   },
 }
+local latexindent = {formatCommand = "latexindent", formatStdin = true}
+local _chktex_fmt = "%f%b%l%b%c%b%k%b%m\n"
+local chktex = {
+  lintCommand = "chktex -q -f" .. _chktex_fmt,
+  lintFormats = {
+    "%f:%l:%c:%trror:%m", "%f:%l:%c:%tarning:%m", "%f:%l:%c:%tessage:%m",
+  },
+}
+
 lspconfig.efm.setup {
   capabilities = cmp_caps,
   init_options = {documentFormatting = true},
-  filetypes = {"lua", "python", "sh"},
+  filetypes = {"lua", "python", "sh", "tex"},
   settings = {
     rootMarkers = {".git/"},
-    languages = {python = {yapf}, lua = {lua_format}, sh = {shfmt, shellcheck}},
+    languages = {
+      python = {yapf},
+      lua = {lua_format},
+      sh = {shfmt, shellcheck},
+      tex = {latexindent, chktex},
+    },
   },
 }
