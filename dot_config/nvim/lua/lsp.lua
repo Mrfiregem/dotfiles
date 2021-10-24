@@ -43,12 +43,14 @@ local shellcheck = {
   },
 }
 local latexindent = {formatCommand = "latexindent", formatStdin = true}
-local _chktex_fmt = "%f%b%l%b%c%b%k%b%m\n"
 local chktex = {
-  lintCommand = "chktex -q -f" .. _chktex_fmt,
+  lintCommand = "chktex -q -s: -v7",
   lintFormats = {
-    "%f:%l:%c:%trror:%m", "%f:%l:%c:%tarning:%m", "%f:%l:%c:%tessage:%m",
+    "%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tessage: %m",
   },
+  lintStdin = true,
+  lintIgnoreExitCode = true,
+  listCategoryMap = {M = "I"},
 }
 
 lspconfig.efm.setup {
