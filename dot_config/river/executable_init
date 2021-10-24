@@ -120,7 +120,7 @@ riverctl spawn 'mako'
 riverctl spawn 'yambar'
 riverctl spawn 'copyq'
 riverctl spawn 'dex -a'
-riverctl spawn 'swayidle'
+riverctl spawn 'swayidle -w'
 riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
 riverctl spawn 'dbus-update-activation-environment --systemd DISPLAY MOZ_DBUS_REMOTE'
 
