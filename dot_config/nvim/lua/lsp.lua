@@ -8,7 +8,7 @@ local cmp_caps = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol
 -- LSPconfig setup --
 ---------------------
 
-lspconfig.jedi_language_server.setup {capabilities = cmp_caps}
+-- lspconfig.jedi_language_server.setup {capabilities = cmp_caps}
 
 lspconfig.rust_analyzer.setup {capabilities = cmp_caps}
 
@@ -33,6 +33,17 @@ lspconfig.sumneko_lua.setup {
   },
 }
 
+lspconfig.texlab.setup {
+  capabilities = cmp_caps,
+  settings = {
+    build = {
+      args = {"-xelatex", "-interaction=nonstopmode", "-synctex=1", "%f"},
+    },
+    chktex = {onOpenAndSave = true},
+    latexindent = {modifyLineBreaks = true},
+  },
+}
+
 local yapf = {formatCommand = "yapf --quiet", formatStdin = true}
 local lua_format = {formatCommand = "lua-format", formatStdin = true}
 local shfmt = {formatCommand = "shfmt -ci -s -i 2", formatStdin = true}
@@ -42,28 +53,13 @@ local shellcheck = {
     "%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tote: %m",
   },
 }
-local latexindent = {formatCommand = "latexindent", formatStdin = true}
-local chktex = {
-  lintCommand = "chktex -q -s: -v7",
-  lintFormats = {
-    "%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tessage: %m",
-  },
-  lintStdin = true,
-  lintIgnoreExitCode = true,
-  listCategoryMap = {M = "I"},
-}
 
 lspconfig.efm.setup {
   capabilities = cmp_caps,
   init_options = {documentFormatting = true},
-  filetypes = {"lua", "python", "sh", "tex"},
+  filetypes = {"lua", "python", "sh"},
   settings = {
     rootMarkers = {".git/"},
-    languages = {
-      python = {yapf},
-      lua = {lua_format},
-      sh = {shfmt, shellcheck},
-      tex = {latexindent, chktex},
-    },
+    languages = {python = {yapf}, lua = {lua_format}, sh = {shfmt, shellcheck}},
   },
 }
