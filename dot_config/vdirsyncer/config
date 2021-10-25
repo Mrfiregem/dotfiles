@@ -13,7 +13,7 @@ fileext = ".ics"
 
 [storage main_calendar_remote]
 type = "caldav"
-url = "https://us.cloudamo.com/remote.php/dav/"
+url = "https://us.cloudamo.com/remote.php/dav"
 username = "firinggems@gmail.com"
-password.fetch = ["command", "secret-tool", "lookup", "service", "nextcloud"]
+password.fetch = ["command", "gopass", "show", "-o", "websites/us.cloudamo.com/firinggems@gmail.com"]
 
