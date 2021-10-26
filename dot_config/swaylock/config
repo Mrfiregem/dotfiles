@@ -1,6 +1,7 @@
+daemonize
 ignore-empty-password
-show-failed-attempts
 indicator-caps-lock
+show-failed-attempts
 
 fade-in=0.5
 grace=10
