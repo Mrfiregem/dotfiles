@@ -1,3 +1,4 @@
+timeout 900 'light -O; light -T 0.75' resume 'light -I'
 timeout 1800 'swaylock'
 timeout 2700 "wlopm --off '*'" resume "wlopm --on '*'"
 before-sleep 'swaylock'
