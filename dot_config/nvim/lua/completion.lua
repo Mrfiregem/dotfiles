@@ -11,13 +11,12 @@ cmp.setup {
     ["<kDown>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.close(),
-    ["<C-Enter>"] = cmp.mapping.confirm({select = true}),
+    ["<CR>"] = cmp.mapping.confirm({select = true}),
   },
   sources = {
-    {name = "buffer"}, -- For words in opened buffers
+    {name = "nvim_lua"}, -- For neovim's Lua API
+    {name = "nvim_lsp"}, -- For LSP completions
     {name = "luasnip"}, -- For snippets
     {name = "neorg"}, -- For Neorg documents
-    {name = "nvim_lsp"}, -- For LSP completions
-    {name = "nvim_lua"}, -- For neovim's Lua API
   },
 }
