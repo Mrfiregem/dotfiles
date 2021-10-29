@@ -149,4 +149,7 @@ bar:
         path: '/home/cheer/scripts/shell/wttr.sh'
         poll-interval: 1800
         content:
+          - string:
+              <<: *icon
+              text: "{icon}"
           - string: { text: "{weather}" }
