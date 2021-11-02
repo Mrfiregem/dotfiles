@@ -13,13 +13,10 @@ riverctl map normal $mod+Shift E exit
 riverctl map normal $mod Return spawn foot
 
 # launcher
-riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl'
+riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl -term xterm'
 
 # power menu
 riverctl map normal $mod Escape spawn 'nwg-bar'
-
-# CopyQ
-riverctl map normal $mod C spawn 'copyq toggle'
 
 # view focus
 riverctl map normal $mod Z zoom
@@ -118,7 +115,6 @@ riverctl xcursor-theme capitaine-cursors 24
 riverctl spawn "swaybg -m fill -i ${HOME}/media/pics/current_wall"
 riverctl spawn 'mako'
 riverctl spawn 'yambar'
-riverctl spawn 'copyq'
 riverctl spawn 'dex -a'
 riverctl spawn 'swayidle -w'
 riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
