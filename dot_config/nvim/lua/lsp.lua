@@ -53,13 +53,19 @@ local shellcheck = {
     "%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tote: %m",
   },
 }
+local taplofmt = {formatCommand = "taplo format --silent -", formatStdin = true}
 
 lspconfig.efm.setup {
   capabilities = cmp_caps,
   init_options = {documentFormatting = true},
-  filetypes = {"lua", "python", "sh"},
+  filetypes = {"lua", "python", "sh", "toml"},
   settings = {
     rootMarkers = {".git/"},
-    languages = {python = {yapf}, lua = {lua_format}, sh = {shfmt, shellcheck}},
+    languages = {
+      lua = {lua_format},
+      python = {yapf},
+      sh = {shfmt, shellcheck},
+      toml = {taplofmt},
+    },
   },
 }
