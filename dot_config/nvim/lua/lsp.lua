@@ -8,7 +8,7 @@ local cmp_caps = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol
 -- LSPconfig setup --
 ---------------------
 
--- lspconfig.jedi_language_server.setup {capabilities = cmp_caps}
+lspconfig.jedi_language_server.setup {capabilities = cmp_caps}
 
 lspconfig.rust_analyzer.setup {capabilities = cmp_caps}
 
