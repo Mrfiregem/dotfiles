@@ -1,13 +1,28 @@
 #!/usr/bin/env bash
 mapfile -t -n 2 out < <(curl -s 'wttr.in/?m&format=%x\n%t\n')
 
+declare daytime
+if [[ "$(date '+%H')" -le 18 ]]; then
+  daytime='d'
+else
+  daytime='n'
+fi
+
+dayicon() {
+  if [[ $daytime == 'd' ]]; then
+    echo "$1"
+  else
+    echo "$2"
+  fi
+}
+
 declare icon
 case "${out[0]}" in
   'o')
-    icon='滛'
+    icon=$(dayicon '滛' '望')
     ;;
   'm')
-    icon='杖'
+    icon=$(dayicon '杖' '')
     ;;
   'mm')
     icon='摒'
@@ -37,10 +52,10 @@ case "${out[0]}" in
     icon=''
     ;;
   '*!*')
-    icon=''
+    icon=$(dayicon '' '')
     ;;
   '/!/')
-    icon=''
+    icon=$(dayicon '' '')
     ;;
   *)
     icon=''
