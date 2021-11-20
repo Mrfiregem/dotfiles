@@ -19,3 +19,8 @@ use_commit = true
 [yambar-wayland]
 source = "git"
 git = "https://codeberg.org/dnkl/yambar.git"
+
+[arturo-bin]
+source = "github"
+github = "arturo-lang/arturo"
+use_latest_release = true
