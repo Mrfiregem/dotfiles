@@ -1,0 +1,18 @@
+{{ if (eq .chezmoi.os "windows") -}}
+.config/
+scripts/
+{{ end -}}
+
+{{ if (ne .chezmoi.os "linux") -}}
+.profile
+.config/environment.d/
+.config/fontconfig/
+.config/foot/
+.config/gtk-3.0/
+.config/mako/
+.config/river/
+.config/swayidle/
+.config/swaylock/
+.config/user-dirs.dirs
+.config/yambar/
+{{ end -}}
