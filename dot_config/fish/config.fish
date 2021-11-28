@@ -9,6 +9,7 @@ abbr -g v $VISUAL
 
 #-- Other Programs
 abbr -g ls exa
+abbr -g ch chezmoi
 
 #-- Trash-CLI
 abbr -g tre trash-empty
