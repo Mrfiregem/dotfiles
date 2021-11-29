@@ -3,7 +3,17 @@ keyfile = "~/.config/nvchecker/keyfile.toml"
 oldver = "~/.local/state/nvchecker/oldver.json"
 newver = "~/.local/state/nvchecker/newver.json"
 
-[imv-wayland]
+[arturo]
+source = "github"
+github = "arturo-lang/arturo"
+use_latest_release = true
+
+[cxbqn]
+source = "github"
+github = "ashermancinelli/cxbqn"
+use_latest_tag = true
+
+[imv]
 source = "github"
 github = "eXeC64/imv"
 use_latest_tag = true
@@ -11,16 +21,11 @@ use_latest_tag = true
 [taplo-cli]
 source = "cratesio"
 
-[wlopm-git]
+[wlopm]
 source = "git"
 git = "https://git.sr.ht/~leon_plickat/wlopm"
 use_commit = true
 
-[yambar-wayland]
+[yambar]
 source = "git"
 git = "https://codeberg.org/dnkl/yambar.git"
-
-[arturo-bin]
-source = "github"
-github = "arturo-lang/arturo"
-use_latest_release = true
