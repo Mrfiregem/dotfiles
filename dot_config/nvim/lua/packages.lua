@@ -11,6 +11,7 @@ return require("packer").startup(function(use)
     requires = {"nvim-lua/plenary.nvim", "vhyrro/neorg-telescope"},
   }
   use {"lervag/vimtex", ft = "tex"}
+  use {"mlochbaum/BQN", rtp = "editors/vim"}
 
   -- Styling plugins
   use "folke/tokyonight.nvim"
