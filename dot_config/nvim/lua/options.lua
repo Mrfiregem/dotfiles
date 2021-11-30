@@ -30,6 +30,6 @@ vim.opt.shiftwidth = 2
 -- PACKAGES
 -- Colorscheme
 vim.opt.termguicolors = true
-vim.g.colors_name = "tokyonight"
+vim.api.nvim_command[[colorscheme tokyonight]]
 
 vim.g.vimtex_compiler_latexmk_engines = {_ = "-xelatex"}
