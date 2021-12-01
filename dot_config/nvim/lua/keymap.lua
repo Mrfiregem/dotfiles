@@ -64,4 +64,4 @@ function _G.show_documentation()
   end
 end
 
-map("n", "<C-m>", "<Cmd>call v:lua.show_documentation()<CR>", nore_silent)
+map("n", "<Leader>m", "<Cmd>call v:lua.show_documentation()<CR>", nore_silent)
