@@ -1,0 +1,4 @@
+[".config/fish/colorschemes/tokyonight_storm.fish"]
+type = "file"
+url = "https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/fish_tokyonight_storm.fish"
+refreshPeriod = "672h"
