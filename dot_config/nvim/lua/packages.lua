@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
     requires = {"nvim-lua/plenary.nvim", "vhyrro/neorg-telescope"},
   }
   use {"lervag/vimtex", ft = "tex"}
-  use {"mlochbaum/BQN", rtp = "editors/vim"}
+  use {"mlochbaum/BQN", rtp = "editors/vim", ft = "bqn"}
 
   -- Styling plugins
   use "folke/tokyonight.nvim"
@@ -26,9 +26,15 @@ return require("packer").startup(function(use)
     "romgrk/barbar.nvim",
     requires = {"kyazdani42/nvim-web-devicons", opt = true},
   }
+  use "stevearc/dressing.nvim"
 
   -- Feature Plugins
-  use "b3nj5m1n/kommentary"
+  use {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  }
   use "junegunn/vim-easy-align"
   use "machakann/vim-sandwich"
   use {

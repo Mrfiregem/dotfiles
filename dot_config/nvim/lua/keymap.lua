@@ -53,6 +53,9 @@ map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", noremap)
 map("n", "<Leader>fg", "<Cmd>Telescope live_grep<CR>", noremap)
 map("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>", noremap)
 
+-- Trouble.nvim
+map("n", "<Leader>xx", "<Cmd>Trouble<CR>", nore_silent)
+
 -- Show docs for current word
 function _G.show_documentation()
   local ft = vim.bo.filetype
