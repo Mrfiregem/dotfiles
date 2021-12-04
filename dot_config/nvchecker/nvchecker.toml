@@ -18,6 +18,11 @@ source = "github"
 github = "eXeC64/imv"
 use_latest_tag = true
 
+[moe]
+source = "github"
+github = "fox0430/moe"
+use_latest_release = true
+
 [taplo-cli]
 source = "cratesio"
 
