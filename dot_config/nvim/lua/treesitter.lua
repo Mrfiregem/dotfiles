@@ -13,7 +13,7 @@ ts_setup.setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
   ensure_installed = {
     "bash", "c", "css", "fish", "html", "javascript", "json", "jsonc", "lua",
-    "norg", "python", "regex", "rust", "toml", "vim", "yaml", "zig",
+    "markdown", "norg", "python", "regex", "rust", "toml", "vim", "yaml", "zig",
   },
   highlight = {enable = true},
   indent = {enable = true},
