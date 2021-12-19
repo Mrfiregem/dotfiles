@@ -13,7 +13,7 @@ riverctl map normal $mod+Shift E exit
 riverctl map normal $mod Return spawn 'foot' # terminal emulator
 riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl -term xterm' # launcher
 riverctl map normal $mod Escape spawn 'nwg-bar' # power menu
-riverctl map normal $mod+Shift T spawn 'bemoji -t' # insert emoji
+riverctl map normal $mod+Shift period spawn 'bemoji -t' # insert emoji
 
 # view focus
 riverctl map normal $mod Z zoom
