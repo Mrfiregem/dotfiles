@@ -4,14 +4,15 @@ return require("packer").startup(function(use)
 
   -- Syntax/language plugins
   use "alaviss/nim.nvim"
-  use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-  use "https://tildegit.org/sloum/gemini-vim-syntax"
+  use "gpanders/vim-scdoc"
+  use {"lervag/vimtex", ft = "tex"}
+  use {"mlochbaum/BQN", rtp = "editors/vim"}
   use {
     "nvim-neorg/neorg",
     requires = {"nvim-lua/plenary.nvim", "vhyrro/neorg-telescope"},
   }
-  use {"lervag/vimtex", ft = "tex"}
-  use {"mlochbaum/BQN", rtp = "editors/vim", ft = "bqn"}
+  use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+  use "https://tildegit.org/sloum/gemini-vim-syntax"
 
   -- Styling plugins
   use "folke/tokyonight.nvim"
