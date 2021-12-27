@@ -13,6 +13,7 @@ return require("packer").startup(function(use)
   }
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use "https://tildegit.org/sloum/gemini-vim-syntax"
+  use "teal-language/vim-teal"
 
   -- Styling plugins
   use "folke/tokyonight.nvim"
