@@ -19,7 +19,6 @@ abbr -g trp trash-put
 abbr -g trr trash-restore
 
 # Path modification
-fish_add_path -g /usr/share/perl6/site/bin
 fish_add_path -g $XDG_DATA_HOME/cargo/bin
 fish_add_path -g $HOME/.local/nimble/bin
 fish_add_path -g $HOME/.local/bin
