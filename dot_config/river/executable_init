@@ -10,11 +10,12 @@ riverctl map normal $mod Q close
 riverctl map normal $mod+Shift E exit
 
 # start program on keypress
-riverctl map normal $mod Return spawn 'foot' # terminal emulator
-riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl -term xterm' # launcher
-riverctl map normal $mod Escape spawn 'nwg-bar' # power menu
-riverctl map normal $mod period spawn 'bemoji -t' # insert emoji
-riverctl map normal $mod+Shift period spawn "bemoji -e | tr -d '\n' | wl-copy" # copy emoji
+riverctl map normal $mod Return spawn 'foot'                                   # terminal emulator
+riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl -term xterm'      # launcher
+riverctl map normal $mod Escape spawn 'nwg-bar'                                # power menu
+riverctl map normal $mod period spawn 'bemoji -t'                              # insert emoji
+riverctl map normal $mod+Shift period spawn 'bemoji -e | tr -d "\n" | wl-copy' # copy emoji
+riverctl map normal None Print spawn 'iriver'                                  # copy emoji
 
 # view focus
 riverctl map normal $mod Z zoom
