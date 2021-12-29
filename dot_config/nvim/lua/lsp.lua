@@ -14,6 +14,8 @@ lspconfig.rust_analyzer.setup {capabilities = cmp_caps}
 
 lspconfig.nimls.setup {capabilities = cmp_caps}
 
+lspconfig.zls.setup {capabilities = cmp_caps}
+
 lspconfig.sumneko_lua.setup {
   capabilities = cmp_caps,
   cmd = {"lua-language-server"},
