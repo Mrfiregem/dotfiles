@@ -8,14 +8,14 @@
 
 case "$1" in
   o | online)
-    wtwitch c | cat -v | sed -n -e 's/\^\[\[[0-9]\+m//g' \
+    wtwitch c | sed -n -e 's/\x1b\[[0-9]\+m//g' \
       -e 's/^[[:space:]]*//' \
-      -e 's/: / -> /' \
+      -e 's/: /\t/' \
       -e '/^Live channels:$/,/^$/{//!p}'
     exit 0
     ;;
   a | all)
-    wtwitch c | cat -v | sed -n -e 's/\^\[\[[0-9]\+m//g' \
+    wtwitch c | sed -n -e 's/\x1b\[[0-9]\+m//g' \
       -e '/Settings:$/,$d' \
       -e '/^[[:space:]]\{3\}/{s/.\{3\}//; s/[:,].*$//; p}' |
       sort
