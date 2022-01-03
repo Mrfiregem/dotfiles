@@ -1,0 +1,17 @@
+[updates]
+auto_update = true
+auto_update_interval_hours = 72
+
+[style.example_text]
+foreground = { rgb = { r = 255, g = 255, b = 255 } }
+background = { ansi = 8 }
+
+[style.command_name]
+foreground = "cyan"
+bold = true
+
+[style.example_variable]
+foreground = "yellow"
+
+[style.example_code]
+foreground = "blue"
