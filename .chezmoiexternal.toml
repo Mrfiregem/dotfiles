@@ -1,3 +1,23 @@
+[".config/lite-xl/plugins/autoinsert.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/lite-xl/lite-xl-plugins/master/plugins/autoinsert.lua"
+refreshPeriod = "120h"
+
+[".config/lite-xl/plugins/autowrap.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/lite-xl/lite-xl-plugins/master/plugins/autowrap.lua"
+refreshPeriod = "120h"
+
+[".config/lite-xl/plugins/eofnewline.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/bokunodev/lite_modules/master/plugins/eofnewline-xl.lua"
+refreshPeriod = "120h"
+
+[".config/lite-xl/plugins/indentguide.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/lite-xl/lite-xl-plugins/master/plugins/indentguide.lua"
+refreshPeriod = "120h"
+
 [".config/fish/colorschemes/tokyonight_storm.fish"]
 type = "file"
 url = "https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/fish_tokyonight_storm.fish"
