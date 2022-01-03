@@ -16,5 +16,5 @@ ts_setup.setup {
     "markdown", "norg", "python", "regex", "rust", "toml", "vim", "yaml", "zig",
   },
   highlight = {enable = true},
-  indent = {enable = true},
+  indent = {enable = true, disable = {"yaml"}},
 }
