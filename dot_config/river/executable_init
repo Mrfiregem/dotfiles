@@ -102,8 +102,8 @@ riverctl border-width 2
 riverctl set-repeat 50 300
 
 # float app-ids
-riverctl float-filter-add app_id 'float'
-riverctl float-filter-add app_id 'popup'
+riverctl float-filter-add app-id 'float'
+riverctl float-filter-add app-id 'popup'
 riverctl float-filter-add app-id 'anki'
 riverctl float-filter-add title 'Sharing Indicator'
 
