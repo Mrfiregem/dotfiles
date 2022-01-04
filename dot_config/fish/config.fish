@@ -5,19 +5,19 @@ source ~/.config/fish/colorschemes/tokyonight_storm.fish
 
 # Abbreviations
 #-- Editor
-abbr -g v $VISUAL
+abbr -a -g v $VISUAL
 
 #-- Other Programs
-abbr -g ls exa
-abbr -g ch chezmoi
-abbr -g lz lazygit
+abbr -a -g ls exa
+abbr -a -g ch chezmoi
+abbr -a -g lz lazygit
 
 #-- Trash-CLI
-abbr -g tre trash-empty
-abbr -g trl trash-list
-abbr -g trm trash-rm
-abbr -g trp trash-put
-abbr -g trr trash-restore
+abbr -a -g tre 'yes | trash-empty'
+abbr -a -g trl trash-list
+abbr -a -g trm trash-rm
+abbr -a -g trp trash-put
+abbr -a -g trr trash-restore
 
 # Path modification
 fish_add_path -g $XDG_DATA_HOME/cargo/bin
