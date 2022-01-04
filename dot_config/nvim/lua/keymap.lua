@@ -15,7 +15,7 @@ local noremap = {noremap = true}
 local nore_silent = {noremap = true, silent = true}
 -- Map leader key
 map("n", ",", "", {}) -- Disable comma for later
-vim.g.mapleader = [[\]]
+vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 -- Misc bindings
