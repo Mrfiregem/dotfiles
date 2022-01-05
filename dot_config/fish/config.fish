@@ -20,6 +20,6 @@ abbr -a -g trp trash-put
 abbr -a -g trr trash-restore
 
 # Path modification
-fish_add_path -g $XDG_DATA_HOME/cargo/bin
+fish_add_path -g $CARGO_HOME/bin
 fish_add_path -g $HOME/.local/nimble/bin
 fish_add_path -g $HOME/.local/bin
