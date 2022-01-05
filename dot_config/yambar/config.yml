@@ -8,7 +8,7 @@ bar:
   spacing: 5
   margin: 7
 
-  font: "Roboto:pixelsize=12"
+  font: "Roboto:pixelsize=14"
   foreground: "c0caf5ff"
   background: "414868ff"
   border:
@@ -40,7 +40,7 @@ bar:
               true:
                 string:
                   <<: *tagstr
-                  font: "Roboto:pixelsize=14:weight=bold"
+                  font: "IBM Plex Sans:pixelsize=14:weight=bold"
               false:
                 map:
                   tag: occupied
@@ -51,7 +51,7 @@ bar:
 
   center:
     - clock:
-        font: "Roboto:pixelsize=14"
+        font: "IBM Plex Sans:pixelsize=14"
         time-format: "%r"
         date-format: "%Y-%m-%d"
         content:
