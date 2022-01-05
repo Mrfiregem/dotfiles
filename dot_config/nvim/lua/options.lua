@@ -27,7 +27,7 @@ vim.opt.listchars = {
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 
--- PACKAGES
+-- [ Packages ]
 -- Colorscheme
 vim.opt.termguicolors = true
 vim.api.nvim_command("colorscheme kanagawa")

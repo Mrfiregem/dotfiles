@@ -2,7 +2,7 @@
 return require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
 
-  -- Syntax/language plugins
+  -- [ Syntax/language plugins ]
   use "alaviss/nim.nvim"
   use "gpanders/vim-scdoc"
   use {"lervag/vimtex", ft = "tex"}
@@ -15,7 +15,7 @@ return require("packer").startup(function(use)
   use "https://tildegit.org/sloum/gemini-vim-syntax"
   use "teal-language/vim-teal"
 
-  -- Styling plugins
+  -- [ Styling plugins ]
   use "rebelot/kanagawa.nvim"
   use {
     "hoob3rt/lualine.nvim",
@@ -27,7 +27,7 @@ return require("packer").startup(function(use)
   }
   use "stevearc/dressing.nvim"
 
-  -- Feature Plugins
+  -- [ Feature Plugins ]
   use {
     "numToStr/Comment.nvim",
     config = function()

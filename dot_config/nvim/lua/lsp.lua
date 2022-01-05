@@ -2,11 +2,11 @@
 vim.cmd("packadd! nvim-lspconfig")
 
 local lspconfig = require("lspconfig")
-local cmp_caps = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol
-                                                               .make_client_capabilities())
+local cmp_lsp = require("cmp_nvim_lsp")
+local lsp_caps = vim.lsp.protocol.make_client_capabilities()
+local cmp_caps = cmp_lsp.update_capabilities(lsp_caps)
 
--- LSPconfig setup --
----------------------
+--[ LSPconfig setup ]
 
 lspconfig.jedi_language_server.setup {capabilities = cmp_caps}
 

@@ -18,17 +18,17 @@ map("n", ",", "", {}) -- Disable comma for later
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
--- Misc bindings
+--[ Misc bindings ]
 map("n", "<Leader> ", "<Cmd>nohlsearch<CR>", nore_silent)
 map("i", "<C-s>", "<Cmd>update<CR>", noremap)
 
--- Window navigation
+--[ Window navigation ]
 map("n", "<C-j>", "<C-w>j", noremap)
 map("n", "<C-k>", "<C-w>k", noremap)
 map("n", "<C-h>", "<C-w>h", noremap)
 map("n", "<C-l>", "<C-w>l", noremap)
 
--- Buffer navigation
+--[ Buffer navigation ]
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", nore_silent)
 map("n", "<A-.>", "<Cmd>BufferNext<CR>", nore_silent)
 map("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", nore_silent)
@@ -36,14 +36,13 @@ map("n", "<A->>", "<Cmd>BufferMoveNext<CR>", nore_silent)
 map("n", "<A-c>", "<Cmd>BufferClose<CR>", nore_silent)
 map("n", "<Leader>bp", "<Cmd>BufferPick<CR>", nore_silent)
 
--- nvim LSP functions
+--[ nvim LSP functions ]
 map("n", "<F12>", "<Cmd>lua vim.lsp.buf.definition()<CR>", nore_silent)
 map("n", "<F2>", "<Cmd>lua vim.lsp.buf.rename()<CR>", nore_silent)
 map("n", "<F3>", "<Cmd>lua vim.lsp.buf.formatting()<CR>", nore_silent)
 map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", nore_silent)
 
--- Plugin-specific mappings
-
+--[ Plugin-specific mappings ]
 -- Easy Align
 map("x", "ga", "<Plug>(EasyAlign)", {})
 map("n", "ga", "<Plug>(EasyAlign)", {})
@@ -57,7 +56,7 @@ map("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>", noremap)
 map("n", "<Leader>xx", "<Cmd>Trouble<CR>", nore_silent)
 
 -- Show docs for current word
-function _G.show_documentation()
+function _G.show_docs()
   local ft = vim.bo.filetype
   local cword = vim.fn.expand("<cword>")
   if ft == "help" or ft == "vim" then
@@ -66,5 +65,4 @@ function _G.show_documentation()
     vim.fn.execute(vim.o.keywordprg .. " " .. cword)
   end
 end
-
-map("n", "<Leader>m", "<Cmd>call v:lua.show_documentation()<CR>", nore_silent)
+map("n", "<Leader>m", "<Cmd>call v:lua.show_docs()<CR>", nore_silent)
