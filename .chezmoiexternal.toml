@@ -22,8 +22,3 @@ refreshPeriod = "120h"
 type = "file"
 url = "https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/fish_tokyonight_storm.fish"
 refreshPeriod = "672h"
-
-[".config/wezterm/colors/tokyonight_storm.toml"]
-type = "file"
-url = "https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/wezterm_tokyonight_storm.toml"
-refreshPeriod = "672h"
