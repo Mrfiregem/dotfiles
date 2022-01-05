@@ -30,6 +30,7 @@ vim.opt.shiftwidth = 2
 -- PACKAGES
 -- Colorscheme
 vim.opt.termguicolors = true
-vim.api.nvim_command[[colorscheme tokyonight]]
+vim.api.nvim_command("colorscheme kanagawa")
+require("lualine").setup {options = {theme = "kanagawa"}}
 
 vim.g.vimtex_compiler_latexmk_engines = {_ = "-xelatex"}

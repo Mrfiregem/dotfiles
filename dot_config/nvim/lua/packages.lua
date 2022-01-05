@@ -16,12 +16,9 @@ return require("packer").startup(function(use)
   use "teal-language/vim-teal"
 
   -- Styling plugins
-  use "folke/tokyonight.nvim"
+  use "rebelot/kanagawa.nvim"
   use {
     "hoob3rt/lualine.nvim",
-    config = function()
-      require("lualine").setup {options = {theme = "tokyonight"}}
-    end,
     requires = {"kyazdani42/nvim-web-devicons", opt = true},
   }
   use {
