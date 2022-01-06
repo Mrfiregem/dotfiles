@@ -1,7 +1,7 @@
 status is-interactive; or exit
 
 # Change the colorscheme
-source ~/.config/fish/colorschemes/tokyonight_storm.fish
+source ~/.config/fish/colorschemes/kanagawa.fish
 
 # Abbreviations
 #-- Editor
