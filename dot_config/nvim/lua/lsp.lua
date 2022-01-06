@@ -56,15 +56,17 @@ local shellcheck = {
   },
 }
 local taplofmt = {formatCommand = "taplo format --silent -", formatStdin = true}
+local nimpretty = {formatCommand = "nimpretty --out:/dev/stdout"}
 
 lspconfig.efm.setup {
   capabilities = cmp_caps,
   init_options = {documentFormatting = true},
-  filetypes = {"lua", "python", "sh", "toml"},
+  filetypes = {"lua", "nim", "python", "sh", "toml"},
   settings = {
     rootMarkers = {".git/"},
     languages = {
       lua = {lua_format},
+      nim = {nimpretty},
       python = {yapf},
       sh = {shfmt, shellcheck},
       toml = {taplofmt},
