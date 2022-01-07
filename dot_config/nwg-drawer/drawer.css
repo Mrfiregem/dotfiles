@@ -1,0 +1,45 @@
+window {
+    background-color: #1f1f28;
+    color: #dcd7ba;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+image {
+  background: none;
+}
+
+button, image {
+    border: none;
+    box-shadow: none;
+}
+
+button {
+  border: 1px solid transparent;
+}
+
+button:hover {
+    background-color: #2d4f67;
+}
+
+button:focus {
+  border: 1px solid #c34043;
+}
+
+/* in case you wanted to give category buttons a different look */
+#category-button {
+    margin: 0 5px;
+}
+
+#pinned-box {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #2d4f67;
+}
+
+#files-box {
+    padding: 5px;
+    border: 1px solid #2d4f67;
+    border-radius: 15px
+}
