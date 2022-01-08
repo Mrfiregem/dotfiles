@@ -44,7 +44,6 @@ return require("packer").startup(function(use)
   use "editorconfig/editorconfig-vim"
 
   use {"neovim/nvim-lspconfig", opt = true}
-  use {"folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons"}
   use {
     "hrsh7th/nvim-cmp",
     requires = {

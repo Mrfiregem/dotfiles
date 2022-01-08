@@ -18,17 +18,17 @@ map("n", ",", "", {}) -- Disable comma for later
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
---[ Misc bindings ]
+-- [ Misc bindings ]
 map("n", "<Leader> ", "<Cmd>nohlsearch<CR>", nore_silent)
 map("i", "<C-s>", "<Cmd>update<CR>", noremap)
 
---[ Window navigation ]
+-- [ Window navigation ]
 map("n", "<C-j>", "<C-w>j", noremap)
 map("n", "<C-k>", "<C-w>k", noremap)
 map("n", "<C-h>", "<C-w>h", noremap)
 map("n", "<C-l>", "<C-w>l", noremap)
 
---[ Buffer navigation ]
+-- [ Buffer navigation ]
 map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", nore_silent)
 map("n", "<A-.>", "<Cmd>BufferNext<CR>", nore_silent)
 map("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", nore_silent)
@@ -36,13 +36,13 @@ map("n", "<A->>", "<Cmd>BufferMoveNext<CR>", nore_silent)
 map("n", "<A-c>", "<Cmd>BufferClose<CR>", nore_silent)
 map("n", "<Leader>bp", "<Cmd>BufferPick<CR>", nore_silent)
 
---[ nvim LSP functions ]
+-- [ nvim LSP functions ]
 map("n", "<F12>", "<Cmd>lua vim.lsp.buf.definition()<CR>", nore_silent)
 map("n", "<F2>", "<Cmd>lua vim.lsp.buf.rename()<CR>", nore_silent)
 map("n", "<F3>", "<Cmd>lua vim.lsp.buf.formatting()<CR>", nore_silent)
 map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", nore_silent)
 
---[ Plugin-specific mappings ]
+-- [ Plugin-specific mappings ]
 -- Easy Align
 map("x", "ga", "<Plug>(EasyAlign)", {})
 map("n", "ga", "<Plug>(EasyAlign)", {})
@@ -51,9 +51,10 @@ map("n", "ga", "<Plug>(EasyAlign)", {})
 map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", noremap)
 map("n", "<Leader>fg", "<Cmd>Telescope live_grep<CR>", noremap)
 map("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>", noremap)
-
--- Trouble.nvim
-map("n", "<Leader>xx", "<Cmd>Trouble<CR>", nore_silent)
+map("n", "<Leader>fd",
+    "<Cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<CR>", noremap)
+map("n", "<Leader>fD",
+    "<Cmd>lua require('telescope.builtin').diagnostics()<CR>", noremap)
 
 -- Show docs for current word
 function _G.show_docs()
