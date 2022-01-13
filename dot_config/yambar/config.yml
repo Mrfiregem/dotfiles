@@ -9,11 +9,11 @@ bar:
   margin: 7
 
   font: "Roboto:pixelsize=14"
-  foreground: "c0caf5ff"
-  background: "414868ff"
+  foreground: "dcd7baff"
+  background: "1f1f28ff"
   border:
     width: 2
-    color: "24283bff"
+    color: "090618ff"
     margin: 10
     top-margin: 4
     bottom-margin: 0
@@ -40,7 +40,7 @@ bar:
               true:
                 string:
                   <<: *tagstr
-                  font: "IBM Plex Sans:pixelsize=14:weight=bold"
+                  font: "Roboto:pixelsize=14:weight=bold"
               false:
                 map:
                   tag: occupied
@@ -51,7 +51,7 @@ bar:
 
   center:
     - clock:
-        font: "IBM Plex Sans:pixelsize=14"
+        font: "Roboto:pixelsize=16"
         time-format: "%r"
         date-format: "%Y-%m-%d"
         content:

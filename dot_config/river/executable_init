@@ -94,8 +94,8 @@ for mode in normal locked; do
 done
 
 # Change border colors
-riverctl border-color-focused '0x9ece6a'
-riverctl border-color-unfocused '0x24283b'
+riverctl border-color-focused '0x76946a'
+riverctl border-color-unfocused '0x090618'
 riverctl border-width 2
 
 # Set repeat rate
