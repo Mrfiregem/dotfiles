@@ -1,6 +1,0 @@
-[Editor]
-  ExtPopupmenu = true
-  ExtTabline = true
-  ExtCmdLine = true
-
-  DisableImeInNormal = false

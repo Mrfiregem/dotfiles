@@ -1,11 +1,16 @@
+# vim: ft=dosini
+
 font=sans-serif 10
-anchor=bottom-right
+icon-path=/usr/share/icons/Papirus-Dark
+
+text-color=#dcd7ba
+background-color=#1f1f28
+
+border-color=#090618
 
 height=200
 
-background-color=#282828
-border-color=#1d2021
+anchor=bottom-right
 
-default-timeout=10000
-
-icon-path=/usr/share/icons/Papirus-Dark
+[urgency="critical"]
+border-color=#c34043

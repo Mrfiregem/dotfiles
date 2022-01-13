@@ -18,7 +18,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Buffer between mouse and edge when scrolling.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 4
 
 -- Gutter to the left of linenumber
 vim.opt.signcolumn = "yes"
