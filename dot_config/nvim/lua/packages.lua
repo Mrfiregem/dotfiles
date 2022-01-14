@@ -14,6 +14,7 @@ return require("packer").startup(function(use)
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use "https://tildegit.org/sloum/gemini-vim-syntax"
   use "teal-language/vim-teal"
+  use "ziglang/zig.vim"
 
   -- [ Styling plugins ]
   use "rebelot/kanagawa.nvim"
