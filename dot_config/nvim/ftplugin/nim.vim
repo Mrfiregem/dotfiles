@@ -1,1 +1,1 @@
-setlocal nofoldenable
+setl nofoldenable
