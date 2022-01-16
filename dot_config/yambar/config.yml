@@ -10,7 +10,7 @@ bar:
 
   font: "Roboto:pixelsize=14"
   foreground: "dcd7baff"
-  background: "1f1f28ff"
+  background: "1f1f28f2" # 95% transparency
   border:
     width: 2
     color: "090618ff"
