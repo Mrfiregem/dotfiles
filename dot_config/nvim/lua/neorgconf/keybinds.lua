@@ -1,3 +1,6 @@
+--[[
+-- UNUSED FILE
+
 -- This sets the leader for all Neorg keybinds. It is separate from the regular <Leader>.
 local neorg_leader = "<Leader>o"
 local neorg_callbacks = require("neorg.callbacks")
@@ -29,3 +32,5 @@ end
 return function()
   neorg_callbacks.on_event(event_enable_keybinds, keybind_function)
 end
+
+--]]
