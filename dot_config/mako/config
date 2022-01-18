@@ -4,7 +4,7 @@ font=sans-serif 10
 icon-path=/usr/share/icons/Papirus-Dark
 
 text-color=#dcd7ba
-background-color=#1f1f28
+background-color=#1f1f28f2
 
 border-color=#090618
 
