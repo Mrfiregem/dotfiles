@@ -10,12 +10,12 @@ riverctl map normal $mod Q close
 riverctl map normal $mod+Shift E exit
 
 # start program on keypress
-riverctl map normal $mod Return spawn 'foot'                                   # terminal emulator
-riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl -term xterm'      # launcher
-riverctl map normal $mod Escape spawn 'nwg-bar'                                # power menu
-riverctl map normal $mod period spawn 'bemoji -t'                              # insert emoji
-riverctl map normal $mod+Shift period spawn 'bemoji -e | tr -d "\n" | wl-copy' # copy emoji
-riverctl map normal None Print spawn 'iriver'                                  # copy emoji
+riverctl map normal $mod Return spawn 'foot'                                    # terminal emulator
+riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl -term xterm -nofs' # launcher
+riverctl map normal $mod Escape spawn 'nwg-bar'                                 # power menu
+riverctl map normal $mod period spawn 'bemoji -t'                               # insert emoji
+riverctl map normal $mod+Shift period spawn 'bemoji -e | tr -d "\n" | wl-copy'  # copy emoji
+riverctl map normal None Print spawn 'iriver'                                   # copy emoji
 
 # view focus
 riverctl map normal $mod Z zoom
@@ -111,13 +111,14 @@ riverctl float-filter-add title 'Sharing Indicator'
 riverctl xcursor-theme capitaine-cursors 24
 
 # program autostart
+riverctl spawn 'systemctl --user import-environment DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE'
+riverctl spawn 'hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE'
+riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
 riverctl spawn "swaybg -m fill -i ${HOME}/media/pics/current_wall"
 riverctl spawn 'mako'
 riverctl spawn 'yambar'
 riverctl spawn 'dex -a'
 riverctl spawn 'swayidle -w'
-riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
-riverctl spawn 'dbus-update-activation-environment --systemd DISPLAY MOZ_DBUS_REMOTE'
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
