@@ -8,7 +8,7 @@ neorg.setup {
       config = {default_keybinds = true, neorg_leader = "<Leader>o"},
     },
     ["core.norg.completion"] = {config = {engine = "nvim-cmp"}},
-    ["core.norg.concealer"] = {}, -- Allows for use of icons
+    ["core.norg.concealer"] = {config = {markup_preset = "dimmed"}},
     ["core.norg.dirman"] = {
       config = {
         workspaces = {main = "~/docs/neorg", school = "~/docs/school"},
