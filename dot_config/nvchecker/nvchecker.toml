@@ -26,6 +26,11 @@ source = "git"
 git = "https://git.sr.ht/~leon_plickat/wlopm"
 use_commit = true
 
+[wpaperd]
+source = "github"
+github = "danyspin97/wpaperd"
+use_latest_release = true
+
 [yambar]
 source = "git"
 git = "https://codeberg.org/dnkl/yambar.git"
