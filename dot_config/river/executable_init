@@ -114,7 +114,7 @@ riverctl xcursor-theme capitaine-cursors 24
 riverctl spawn 'systemctl --user import-environment DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE'
 riverctl spawn 'hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE'
 riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
-riverctl spawn "swaybg -m fill -i ${HOME}/media/pics/current_wall"
+riverctl spawn "wpaperd"
 riverctl spawn 'mako'
 riverctl spawn 'yambar'
 riverctl spawn 'dex -a'
