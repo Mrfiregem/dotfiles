@@ -18,6 +18,11 @@ type = "file"
 url = "https://raw.githubusercontent.com/lite-xl/lite-xl-plugins/master/plugins/indentguide.lua"
 refreshPeriod = "120h"
 
+[".config/fish/colorschemes/kanagawa.fish"]
+type = "file"
+url = "https://raw.githubusercontent.com/rebelot/kanagawa.nvim/master/extras/kanagawa.fish"
+refreshPeriod = "672h"
+
 [".config/fish/colorschemes/tokyonight_storm.fish"]
 type = "file"
 url = "https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/fish_tokyonight_storm.fish"
