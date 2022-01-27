@@ -1,0 +1,7 @@
+# vim:ft=fish
+function fish_greeting --description 'Show the current date on open.'
+date '+%c'
+{{ if (eq .chezmoi.os "linux") -}}
+nvcmp
+{{ end -}}
+end
