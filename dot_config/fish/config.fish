@@ -6,6 +6,7 @@ source ~/.config/fish/colorschemes/kanagawa.fish
 # Abbreviations
 #-- Editor
 abbr -a -g v $VISUAL
+abbr -a -g vg goneovim
 
 #-- Other Programs
 abbr -a -g ls exa
