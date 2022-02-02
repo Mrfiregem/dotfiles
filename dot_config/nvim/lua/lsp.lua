@@ -34,29 +34,3 @@ lspconfig.sumneko_lua.setup {
     },
   },
 }
-
-local lua_format = {formatCommand = "lua-format", formatStdin = true}
-local shfmt = {formatCommand = "shfmt -ci -s -i 2", formatStdin = true}
-local shellcheck = {
-  lintCommand = "shellcheck -f gcc -x",
-  lintFormats = {
-    "%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tote: %m",
-  },
-}
-local taplofmt = {formatCommand = "taplo format --silent -", formatStdin = true}
-local nimpretty = {formatCommand = "nimpretty --out:/dev/stdout"}
-
-lspconfig.efm.setup {
-  capabilities = cmp_caps,
-  init_options = {documentFormatting = true},
-  filetypes = {"lua", "nim", "sh", "toml"},
-  settings = {
-    rootMarkers = {".git/"},
-    languages = {
-      lua = {lua_format},
-      nim = {nimpretty},
-      sh = {shfmt, shellcheck},
-      toml = {taplofmt},
-    },
-  },
-}
