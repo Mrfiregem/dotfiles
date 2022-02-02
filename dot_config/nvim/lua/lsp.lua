@@ -8,21 +8,21 @@ local cmp_caps = cmp_lsp.update_capabilities(lsp_caps)
 
 --[ LSPconfig setup ]
 
-lspconfig.jedi_language_server.setup {capabilities = cmp_caps}
+lspconfig.jedi_language_server.setup { capabilities = cmp_caps }
 
-lspconfig.rust_analyzer.setup {capabilities = cmp_caps}
+lspconfig.rust_analyzer.setup { capabilities = cmp_caps }
 
-lspconfig.nimls.setup {capabilities = cmp_caps}
+lspconfig.nimls.setup { capabilities = cmp_caps }
 
-lspconfig.zls.setup {capabilities = cmp_caps}
+lspconfig.zls.setup { capabilities = cmp_caps }
 
 lspconfig.sumneko_lua.setup {
   capabilities = cmp_caps,
-  cmd = {"lua-language-server"},
+  cmd = { "lua-language-server" },
   settings = {
     Lua = {
-      runtime = {version = "5.4", path = "lua"},
-      diagnostics = {globals = {"vim"}},
+      runtime = { version = "5.4", path = "lua" },
+      diagnostics = { globals = { "vim" } },
       workspace = {
         library = {
           [vim.fn.expand("$VIMRUNTIME/lua")] = true,

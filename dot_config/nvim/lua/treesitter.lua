@@ -4,7 +4,7 @@ local ts_setup = require("nvim-treesitter.configs")
 ts_configs.norg = {
   install_info = {
     url = "https://github.com/nvim-neorg/tree-sitter-norg",
-    files = {"src/parser.c", "src/scanner.cc"},
+    files = { "src/parser.c", "src/scanner.cc" },
     branch = "main",
   },
 }
@@ -12,7 +12,7 @@ ts_configs.norg = {
 ts_configs.norg_meta = {
   install_info = {
     url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
-    files = {"src/parser.c"},
+    files = { "src/parser.c" },
     branch = "main",
   },
 }
@@ -20,7 +20,7 @@ ts_configs.norg_meta = {
 ts_configs.norg_table = {
   install_info = {
     url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
-    files = {"src/parser.c"},
+    files = { "src/parser.c" },
     branch = "main",
   },
 }
@@ -28,10 +28,27 @@ ts_configs.norg_table = {
 ts_setup.setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
   ensure_installed = {
-    "bash", "c", "css", "fish", "html", "javascript", "json", "jsonc", "lua",
-    "markdown", "norg", "norg_meta", "norg_table", "python", "regex", "rust",
-    "toml", "vim", "yaml", "zig",
+    "bash",
+    "c",
+    "css",
+    "fish",
+    "html",
+    "javascript",
+    "json",
+    "jsonc",
+    "lua",
+    "markdown",
+    "norg",
+    "norg_meta",
+    "norg_table",
+    "python",
+    "regex",
+    "rust",
+    "toml",
+    "vim",
+    "yaml",
+    "zig",
   },
-  highlight = {enable = true},
-  indent = {enable = true, disable = {"yaml", "zig"}},
+  highlight = { enable = true },
+  indent = { enable = true, disable = { "yaml", "zig" } },
 }

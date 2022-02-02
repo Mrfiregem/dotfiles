@@ -5,13 +5,13 @@ neorg.setup {
   load = {
     ["core.defaults"] = {}, -- Load all the default modules
     ["core.keybinds"] = {
-      config = {default_keybinds = true, neorg_leader = "<Leader>o"},
+      config = { default_keybinds = true, neorg_leader = "<Leader>o" },
     },
-    ["core.norg.completion"] = {config = {engine = "nvim-cmp"}},
-    ["core.norg.concealer"] = {config = {markup_preset = "dimmed"}},
+    ["core.norg.completion"] = { config = { engine = "nvim-cmp" } },
+    ["core.norg.concealer"] = { config = { markup_preset = "dimmed" } },
     ["core.norg.dirman"] = {
       config = {
-        workspaces = {main = "~/docs/neorg", school = "~/docs/school"},
+        workspaces = { main = "~/docs/neorg", school = "~/docs/school" },
         autodetect = true,
         autochdir = true,
       },
@@ -19,4 +19,3 @@ neorg.setup {
     ["core.integrations.telescope"] = {},
   },
 }
-

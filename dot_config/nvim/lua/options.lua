@@ -41,10 +41,10 @@ vim.opt.shiftwidth = 2
 -- Colorscheme
 vim.opt.termguicolors = true
 vim.api.nvim_command("colorscheme kanagawa")
-require("lualine").setup {options = {theme = "kanagawa"}}
+require("lualine").setup { options = { theme = "kanagawa" } }
 
 -- vimtex
-vim.g.vimtex_compiler_latexmk_engines = {_ = "-xelatex"}
+vim.g.vimtex_compiler_latexmk_engines = { _ = "-xelatex" }
 
 -- nvim-cmp
-vim.opt.completeopt = {"menu", "menuone", "noselect"}
+vim.opt.completeopt = { "menu", "menuone", "noselect" }

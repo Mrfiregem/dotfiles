@@ -11,8 +11,8 @@ local function term(str)
 end
 --]]
 
-local noremap = {noremap = true}
-local nore_silent = {noremap = true, silent = true}
+local noremap = { noremap = true }
+local nore_silent = { noremap = true, silent = true }
 -- Map leader key
 map("n", ",", "", {}) -- Disable comma for later
 vim.g.mapleader = " "
@@ -51,10 +51,8 @@ map("n", "ga", "<Plug>(EasyAlign)", {})
 map("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>", noremap)
 map("n", "<Leader>fg", "<Cmd>Telescope live_grep<CR>", noremap)
 map("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>", noremap)
-map("n", "<Leader>fd",
-    "<Cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<CR>", noremap)
-map("n", "<Leader>fD",
-    "<Cmd>lua require('telescope.builtin').diagnostics()<CR>", noremap)
+map("n", "<Leader>fd", "<Cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<CR>", noremap)
+map("n", "<Leader>fD", "<Cmd>lua require('telescope.builtin').diagnostics()<CR>", noremap)
 
 -- Show docs for current word
 function _G.show_docs()
