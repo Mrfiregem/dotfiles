@@ -46,7 +46,6 @@ lspconfig.texlab.setup {
   },
 }
 
-local yapf = {formatCommand = "yapf --quiet", formatStdin = true}
 local lua_format = {formatCommand = "lua-format", formatStdin = true}
 local shfmt = {formatCommand = "shfmt -ci -s -i 2", formatStdin = true}
 local shellcheck = {
@@ -61,13 +60,12 @@ local nimpretty = {formatCommand = "nimpretty --out:/dev/stdout"}
 lspconfig.efm.setup {
   capabilities = cmp_caps,
   init_options = {documentFormatting = true},
-  filetypes = {"lua", "nim", "python", "sh", "toml"},
+  filetypes = {"lua", "nim", "sh", "toml"},
   settings = {
     rootMarkers = {".git/"},
     languages = {
       lua = {lua_format},
       nim = {nimpretty},
-      python = {yapf},
       sh = {shfmt, shellcheck},
       toml = {taplofmt},
     },
