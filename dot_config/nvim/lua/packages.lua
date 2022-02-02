@@ -5,8 +5,6 @@ return require("packer").startup(function(use)
   -- [ Syntax/language plugins ]
   use "alaviss/nim.nvim"
   use "gpanders/vim-scdoc"
-  use {"lervag/vimtex", ft = "tex"}
-  use {"mlochbaum/BQN", rtp = "editors/vim"}
   use {
     "nvim-neorg/neorg",
     requires = {"nvim-lua/plenary.nvim", "vhyrro/neorg-telescope"},
