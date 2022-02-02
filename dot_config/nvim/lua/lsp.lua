@@ -35,17 +35,6 @@ lspconfig.sumneko_lua.setup {
   },
 }
 
-lspconfig.texlab.setup {
-  capabilities = cmp_caps,
-  settings = {
-    build = {
-      args = {"-xelatex", "-interaction=nonstopmode", "-synctex=1", "%f"},
-    },
-    chktex = {onOpenAndSave = true},
-    latexindent = {modifyLineBreaks = true},
-  },
-}
-
 local lua_format = {formatCommand = "lua-format", formatStdin = true}
 local shfmt = {formatCommand = "shfmt -ci -s -i 2", formatStdin = true}
 local shellcheck = {
