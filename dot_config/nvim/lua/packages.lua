@@ -45,14 +45,6 @@ return require("packer").startup(function(use)
   use { "neovim/nvim-lspconfig", opt = true }
   use {
     "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-      require("null-ls").setup {
-        sources = {
-          require("null-ls").builtins.formatting.stylua,
-          require("null-ls").builtins.completion.spell,
-        },
-      }
-    end,
     requires = { "nvim-lua/plenary.nvim" },
   }
   use {

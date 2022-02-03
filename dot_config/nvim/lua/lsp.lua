@@ -5,6 +5,7 @@ local lspconfig = require("lspconfig")
 local cmp_lsp = require("cmp_nvim_lsp")
 local lsp_caps = vim.lsp.protocol.make_client_capabilities()
 local cmp_caps = cmp_lsp.update_capabilities(lsp_caps)
+local null_ls = require("null-ls")
 
 --[ LSPconfig setup ]
 
@@ -32,5 +33,27 @@ lspconfig.sumneko_lua.setup {
         },
       },
     },
+  },
+}
+
+--[ Null-LS ]
+local nl_format = null_ls.builtins.formatting
+local nl_diag = null_ls.builtins.diagnostics
+null_ls.setup {
+  sources = {
+    -- Formatting
+    nl_format.black,
+    nl_format.fish_indent,
+    nl_format.isort,
+    nl_format.nimpretty,
+    nl_format.shfmt,
+    nl_format.stylua,
+    nl_format.taplo,
+    nl_format.zigfmt,
+    -- Diagnostics
+    nl_diag.flake8,
+    nl_diag.selene,
+    nl_diag.shellcheck,
+    nl_diag.teal,
   },
 }
