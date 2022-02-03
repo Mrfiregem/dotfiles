@@ -40,6 +40,7 @@ lspconfig.sumneko_lua.setup {
 local nl_format = null_ls.builtins.formatting
 local nl_diag = null_ls.builtins.diagnostics
 null_ls.setup {
+  diagnostics_format = "#{m} (#{s})",
   sources = {
     -- Formatting
     nl_format.black,
@@ -52,7 +53,6 @@ null_ls.setup {
     nl_format.zigfmt,
     -- Diagnostics
     nl_diag.flake8,
-    nl_diag.selene,
     nl_diag.shellcheck,
     nl_diag.teal,
   },

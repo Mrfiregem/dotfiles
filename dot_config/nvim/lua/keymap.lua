@@ -53,6 +53,7 @@ map("n", "<Leader>fg", "<Cmd>Telescope live_grep<CR>", noremap)
 map("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>", noremap)
 map("n", "<Leader>fd", "<Cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<CR>", noremap)
 map("n", "<Leader>fD", "<Cmd>lua require('telescope.builtin').diagnostics()<CR>", noremap)
+map("n", "<Leader>fk", "<Cmd>lua require('telescope.builtin').keymaps()<CR>", noremap)
 
 -- Show docs for current word
 function _G.show_docs()
