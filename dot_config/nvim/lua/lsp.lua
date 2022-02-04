@@ -47,6 +47,7 @@ null_ls.setup {
     nl_format.fish_indent,
     nl_format.isort,
     nl_format.nimpretty,
+    nl_format.prettier,
     nl_format.shfmt,
     nl_format.stylua,
     nl_format.taplo,
