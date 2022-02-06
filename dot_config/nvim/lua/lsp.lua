@@ -39,6 +39,8 @@ lspconfig.sumneko_lua.setup {
 --[ Null-LS ]
 local nl_format = null_ls.builtins.formatting
 local nl_diag = null_ls.builtins.diagnostics
+local nl_action = null_ls.builtins.code_actions
+local nl_complete = null_ls.builtins.completion
 null_ls.setup {
   diagnostics_format = "#{m} (#{s})",
   sources = {
@@ -56,5 +58,9 @@ null_ls.setup {
     nl_diag.flake8,
     nl_diag.shellcheck,
     nl_diag.teal,
+    -- Code actions
+    nl_action.shellcheck,
+    -- Completion
+    nl_complete.luasnip,
   },
 }
