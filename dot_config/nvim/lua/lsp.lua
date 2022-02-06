@@ -59,6 +59,7 @@ null_ls.setup {
     nl_diag.shellcheck,
     nl_diag.teal,
     -- Code actions
+    nl_action.gitsigns,
     nl_action.shellcheck,
     -- Completion
     nl_complete.luasnip,
