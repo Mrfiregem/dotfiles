@@ -60,9 +60,11 @@ function _G.show_docs()
   local ft = vim.bo.filetype
   local cword = vim.fn.expand("<cword>")
   if ft == "help" or ft == "vim" then
-    vim.fn.execute("help " .. cword)
+    vim.api.nvim_command("help " .. cword)
+  elseif ft == "tex" then
+    vim.api.nvim_command("VimtexDocPackage")
   else
-    vim.fn.execute(vim.o.keywordprg .. " " .. cword)
+    vim.api.nvim_command(vim.o.keywordprg .. " " .. cword)
   end
 end
 map("n", "<Leader>m", "<Cmd>call v:lua.show_docs()<CR>", nore_silent)
