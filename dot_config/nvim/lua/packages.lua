@@ -5,6 +5,7 @@ return require("packer").startup(function(use)
   -- [ Syntax/language plugins ]
   use("alaviss/nim.nvim")
   use("gpanders/vim-scdoc")
+  use("lervag/vimtex")
   use {
     "nvim-neorg/neorg",
     requires = { "nvim-lua/plenary.nvim", "vhyrro/neorg-telescope" },
@@ -15,11 +16,17 @@ return require("packer").startup(function(use)
   use("ziglang/zig.vim")
 
   -- [ Styling plugins ]
-  use("rebelot/kanagawa.nvim")
+  use {
+    "rebelot/kanagawa.nvim",
+    config = function()
+      require("kanagawa").setup { transparent = true }
+    end,
+  }
   use {
     "hoob3rt/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   }
+  use("rebelot/heirline.nvim")
   use {
     "romgrk/barbar.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
