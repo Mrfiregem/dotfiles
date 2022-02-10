@@ -10,13 +10,10 @@ local null_ls = require("null-ls")
 --[ LSPconfig setup ]
 
 lspconfig.jedi_language_server.setup { capabilities = cmp_caps }
-
-lspconfig.rust_analyzer.setup { capabilities = cmp_caps }
-
 lspconfig.nimls.setup { capabilities = cmp_caps }
-
+lspconfig.rust_analyzer.setup { capabilities = cmp_caps }
+lspconfig.texlab.setup { capabilities = cmp_caps }
 lspconfig.zls.setup { capabilities = cmp_caps }
-
 lspconfig.sumneko_lua.setup {
   capabilities = cmp_caps,
   cmd = { "lua-language-server" },
