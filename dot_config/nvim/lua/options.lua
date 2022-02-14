@@ -44,7 +44,7 @@ vim.api.nvim_command("colorscheme kanagawa")
 require("lualine").setup { options = { theme = "kanagawa" } }
 
 -- vimtex
-vim.g.vimtex_compiler_method = "tectonic"
+vim.g.vimtex_compiler_latexmk_engines = { _ = "-xelatex" }
 
 -- nvim-cmp
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
