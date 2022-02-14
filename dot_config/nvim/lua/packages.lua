@@ -16,12 +16,7 @@ return require("packer").startup(function(use)
   use("ziglang/zig.vim")
 
   -- [ Styling plugins ]
-  use {
-    "rebelot/kanagawa.nvim",
-    config = function()
-      require("kanagawa").setup { transparent = true }
-    end,
-  }
+  use("rebelot/kanagawa.nvim")
   use {
     "hoob3rt/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },

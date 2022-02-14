@@ -39,7 +39,7 @@ vim.opt.shiftwidth = 2
 
 -- [ Packages ]
 -- Colorscheme
-vim.opt.termguicolors = true
+require("kanagawa").setup { transparent = true }
 vim.api.nvim_command("colorscheme kanagawa")
 require("lualine").setup { options = { theme = "kanagawa" } }
 
