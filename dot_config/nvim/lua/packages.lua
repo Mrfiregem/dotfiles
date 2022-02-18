@@ -5,6 +5,7 @@ return require("packer").startup(function(use)
   -- [ Syntax/language plugins ]
   use("alaviss/nim.nvim")
   use("gpanders/vim-scdoc")
+  use("jamespeapen/swayconfig.vim")
   use("lervag/vimtex")
   use {
     "nvim-neorg/neorg",
