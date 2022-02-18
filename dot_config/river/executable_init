@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # See the river(1), riverctl(1), and rivertile(1) man pages for complete
 # documentation.
@@ -114,10 +114,11 @@ riverctl xcursor-theme capitaine-cursors 24
 riverctl spawn 'systemctl --user import-environment DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE'
 riverctl spawn 'hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE'
 riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
-riverctl spawn "wpaperd"
+riverctl spawn 'wpaperd'
 riverctl spawn 'mako'
 riverctl spawn 'yambar'
-riverctl spawn 'dex -a'
+declare -a dex_args=(/etc/xdg/autostart/gnome-keyring-{pkcs11,secrets,ssh}.desktop)
+riverctl spawn "dex ${dex_args[*]}"
 riverctl spawn 'swayidle -w'
 
 # Set and exec into the default layout generator, rivertile.
