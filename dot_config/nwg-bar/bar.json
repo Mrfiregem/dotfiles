@@ -6,7 +6,7 @@
   },
   {
     "label": "Logout",
-    "exec": "swaymsg exit",
+    "exec": "waylogout",
     "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
   },
   {
