@@ -1,16 +1,13 @@
 # ==] Variables [==
 # Logo key
 set $mod Mod4
-# Home row direction keys, like vim
+# Home row direction keys
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
+# Apps
 set $term foot
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
 set $menu nwg-drawer -ovl -nofs
 
 # ==] Output configuration [==
@@ -27,19 +24,34 @@ input "type:keyboard" {
   xkb_numlock enabled
 }
 
+# ==] Appearance [==
+gaps inner 8
+gaps outer 8
+default_border pixel 2
+
+set $highlight #76946a
+set $text #dcd7ba
+#class                  border     bg      txt     indicator  child_border
+client.focused          $highlight #2d4f67 $text   #96bb6c    $highlight
+client.focused_inactive #6a9589    #223249 #c8c093 $highlight #6a9589
+client.unfocused        #1f1f28    #16161d #727169 #223249    #1f1f28
+client.urgent           #c34043    #e46876 $text   #ff9e3b    #c34043
+
 # ==] Key bindings [==
-# Start a terminal
+# Terminal
 bindsym $mod+Return exec $term
+# Launcher
+bindsym $mod+Shift+Return exec $menu
+# Power menu
+bindsym $mod+Escape exec nwg-bar
+bindsym $mod+Period exec 'bemoji -t'
+
 # Kill focused window
 bindsym $mod+q kill
-# Start your launcher
-bindsym $mod+Shift+Return exec $menu
 # Move/resize floating windows
 floating_modifier $mod normal
 # Reload the configuration file
-bindsym $mod+e reload
-# Exit sway
-bindsym $mod+Shift+e exec 'swaymsg exit'
+bindsym $mod+Shift+e reload
 # Moving around:
   # Move your focus around
   bindsym $mod+$left focus left
@@ -115,5 +127,8 @@ bindsym $mod+F11 mode "passthrough"
 
 # ==] Status Bar [==
 exec yambar
+
+exec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE"
+exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE"
 
 include /etc/sway/config.d/*
