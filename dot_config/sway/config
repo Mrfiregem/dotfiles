@@ -126,7 +126,7 @@ mode "passthrough" {
 bindsym $mod+F11 mode "passthrough"
 
 # ==] Status Bar [==
-exec yambar
+exec yambar -c "$XDG_CONFIG_HOME/yambar/sway.yml"
 
 exec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE"
 exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE"

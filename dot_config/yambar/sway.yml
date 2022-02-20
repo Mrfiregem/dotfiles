@@ -2,6 +2,8 @@ nerdicon: &icon
   font: "Symbols Nerd Font:pixelsize=14"
   right-margin: 4
 
+std_underline: &std_underline { underline: { size: 2, color: ffffffff } }
+
 bar:
   height: 32
   location: top
@@ -19,35 +21,46 @@ bar:
     bottom-margin: 0
 
   left:
-    - river:
+    - i3:
         anchors:
-          tag_string: &tagstr
-            text: "{id}"
-            right-margin: 4
-        title:
-          map:
-            tag: title
-            default:
-              string:
-                text: "- {title}"
-                max: 100
-            values:
-              "": { string: { text: "" } }
+          - sort: ascending
+          - string: &default
+              text: "{name}"
+              right-margin: 4
+              on-click: "swaymsg --quiet workspace {name}"
+        sort: ascending
         content:
-          map:
-            tag: focused
-            values:
-              true:
-                string:
-                  <<: *tagstr
-                  font: "Roboto:pixelsize=14:weight=bold"
-              false:
-                map:
-                  tag: occupied
-                  values:
-                    false: { empty: {} }
-                    true:
-                      string: *tagstr
+          "":
+            map:
+              tag: state
+              values:
+                focused:
+                  string:
+                    <<: *default
+                    font: "Roboto:pixelsize=14:weight=bold"
+                unfocused:
+                  string: { <<: *default }
+                invisible:
+                  string:
+                    <<: *default
+                    foreground: 727169ff
+                urgent:
+                  string:
+                    <<: *default
+                    foreground: e82424ff
+          current:
+            map:
+              left-margin: 8
+              tag: application
+              values:
+                "": { string: { text: "- {title}" } }
+              default:
+                list:
+                  spacing: 0
+                  items:
+                    - string: { text: "{application}", max: 10 }
+                    - string: { text: ": " }
+                    - string: { text: "{title}", max: 88 }
 
   center:
     - clock:
