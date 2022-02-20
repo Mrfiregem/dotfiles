@@ -24,6 +24,7 @@ bar:
           tag_string: &tagstr
             text: "{id}"
             right-margin: 4
+            on-click: "riverctl set-focused-tags {id}"
         title:
           map:
             tag: title
@@ -144,7 +145,9 @@ bar:
           - string:
               <<: *icon
               text: ""
-          - string: { text: "{updcount}" }
+          - string:
+              text: "{updcount}"
+              on-click: "updnotify"
     - script:
         path: "/home/cheer/scripts/shell/wttr.sh"
         poll-interval: 1800
