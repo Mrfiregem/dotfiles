@@ -7,3 +7,5 @@ eval "$(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-ge
 set +a
 
 eval "$(luarocks path)"
+
+PATH=$HOME/.local/bin:$PATH
