@@ -1,0 +1,2 @@
+#!/bin/sh
+notify-send -i /usr/share/icons/Papirus/64x64/apps/distributor-logo-archlinux.svg -t 10000 'Package Updates' "$(checkupdates)"
