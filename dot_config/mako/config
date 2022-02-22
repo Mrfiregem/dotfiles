@@ -1,16 +1,20 @@
 # vim: ft=dosini
-
-font=sans-serif 10
 icon-path=/usr/share/icons/Papirus-Dark
 
 text-color=#dcd7ba
 background-color=#1f1f28f2
-
-border-color=#090618
+border-color=#7e9cd8
+font=sans-serif 10
 
 height=200
-
 anchor=bottom-right
+
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 [urgency="critical"]
 border-color=#c34043
+
+[app-name="Firefox"]
+group-by=app-name
+ignore-timeout=1
+default-timeout=10000
