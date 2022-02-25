@@ -117,7 +117,9 @@ riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
 riverctl spawn 'wpaperd'
 riverctl spawn 'mako'
 riverctl spawn 'yambar'
-declare -a dex_args=(/etc/xdg/autostart/gnome-keyring-{pkcs11,secrets,ssh}.desktop)
+declare -a dex_args=(
+  /etc/xdg/autostart/gnome-keyring-{pkcs11,secrets,ssh}.desktop
+  /etc/xdg/autostart/org.fcitx.Fcitx5.desktop)
 riverctl spawn "dex ${dex_args[*]}"
 riverctl spawn 'swayidle -w'
 
