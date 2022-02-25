@@ -2,6 +2,6 @@
 overlay_font = sans-serif:16
 
 [binds]
-<Ctrl+x> = exec garbage put "$imv_current_file"; close
+<Shift+x> = exec garbage put "$imv_current_file"; close
 
 # vim:ft=dosini
