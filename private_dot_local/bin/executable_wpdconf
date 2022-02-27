@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+# Update path in wpaperd config
+
+if test -d $imv_current_file
+    set dirname $imv_current_file
+else
+    set dirname (string split -f 1 -m 1 -r '/' $imv_current_file)
+end
+
+dasel put string -f $XDG_CONFIG_HOME/wpaperd/output.conf -p toml \
+    '.default.path' $dirname
