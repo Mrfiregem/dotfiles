@@ -5,6 +5,6 @@ overlay_font = sans-serif:16
 wall = exec wpdconf "$imv_current_file"
 
 [binds]
-<Shift+x> = exec garbage put "$imv_current_file"; close
+<Shift+X> = exec garbage put "$imv_current_file"; close
 
 # vim:ft=dosini
