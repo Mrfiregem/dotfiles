@@ -50,6 +50,7 @@ null_ls.setup {
     nl_format.shfmt,
     nl_format.stylua,
     nl_format.taplo,
+    nl_format.xmllint,
     nl_format.zigfmt,
     -- Diagnostics
     nl_diag.flake8,
