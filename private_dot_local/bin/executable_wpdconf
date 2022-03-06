@@ -1,6 +1,11 @@
 #!/usr/bin/env fish
 # Update path in wpaperd config
 
+if not set -q imv_current_file
+  echo "Run this using imv" 1>&2
+  exit 1
+end
+
 if test -d $imv_current_file
     set dirname $imv_current_file
 else
