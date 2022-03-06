@@ -10,6 +10,7 @@ abbr -a -g v $VISUAL
 abbr -a -g ls exa
 abbr -a -g ch chezmoi
 abbr -a -g lz lazygit
+abbr -a -g gd gallery-dl
 
 #-- Trash-CLI
 abbr -a -g gp garbage put
