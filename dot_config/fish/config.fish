@@ -4,7 +4,11 @@ end
 
 # Abbreviations
 #-- Editor
-abbr -a -g v $VISUAL
+if set -q VISUAL
+  abbr -a -g v $VISUAL
+else
+  abbr -a -g v nvim
+end
 
 #-- Other Programs
 abbr -a -g ls exa
