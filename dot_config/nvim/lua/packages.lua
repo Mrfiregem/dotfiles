@@ -8,10 +8,6 @@ return require("packer").startup(function(use)
   use("gpanders/vim-scdoc")
   use("jamespeapen/swayconfig.vim")
   use("lervag/vimtex")
-  use {
-    "nvim-neorg/neorg",
-    requires = { "nvim-lua/plenary.nvim", "vhyrro/neorg-telescope" },
-  }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use("https://tildegit.org/sloum/gemini-vim-syntax")
   use("teal-language/vim-teal")

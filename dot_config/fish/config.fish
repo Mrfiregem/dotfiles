@@ -1,14 +1,16 @@
-if status is-interactive
-  source ~/.config/fish/colorschemes/kanagawa.fish
+if status is-login
+    if not set -q VISUAL
+        set -gx VISUAL nvim
+        set -gx EDITOR $VISUAL
+    end
 end
+
+source ~/.config/fish/colorschemes/kanagawa.fish
 
 # Abbreviations
 #-- Editor
-if set -q VISUAL
-  abbr -a -g v $VISUAL
-else
-  abbr -a -g v nvim
-end
+
+abbr -a -g v $VISUAL
 
 #-- Other Programs
 abbr -a -g ls exa
