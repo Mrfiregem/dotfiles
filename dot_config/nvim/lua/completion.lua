@@ -39,6 +39,5 @@ cmp.setup {
     { name = "nvim_lua" }, -- For neovim's Lua API
     { name = "nvim_lsp" }, -- For LSP completions
     { name = "luasnip" }, -- For snippets
-    { name = "neorg" }, -- For Neorg documents
   },
 }
