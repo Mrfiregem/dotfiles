@@ -15,6 +15,3 @@ require("completion")
 
 -- Nvim and package key bindings
 require("keymap")
-
--- Neorg setup
-require("neorgconf")
