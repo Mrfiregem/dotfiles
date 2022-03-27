@@ -1,2 +1,0 @@
-prompt = "let pwd = ($nu.cwd | into string); build-string (ansi gb) '[v ' (ansi reset) (if $pwd == '/' {echo '/'} {$pwd | str find-replace $'^($nu.home-dir)' '~' | path basename}) (ansi gb) ']\u001B[200~› ' (ansi reset)"
-startup = ["source ~/.config/nu/conf.d/pac.nu", "source ~/.config/nu/conf.d/trash.nu"]
