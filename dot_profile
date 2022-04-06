@@ -6,7 +6,7 @@ set -a
 eval "$(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)"
 set +a
 
-PATH="/usr/local/texlive/2021/bin/x86_64-linux:$PATH"
+PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
 eval "$(luarocks path)"
 PATH="$XDG_STATE_HOME/cargo/bin:$PATH"
 PATH="$HOME/.local/nimble/bin:$PATH"
