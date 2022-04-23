@@ -1,12 +1,17 @@
 {{ $email := promptString "Email" -}}
-{{ $conf := env "XDG_CONFIG_HOME" | default (print .chezmoi.homeDir "/.config") -}}
 
 encryption = "age"
 
 [age]
-identity = "{{ $conf }}/age/chezmoi.txt"
+identity = "{{ .xdg_base.config }}/age/chezmoi.txt"
 recipient = "age1vcp9a6rnmv9njl4jdadvf2f9j9ynynpmrr99a3fyxr7rxgvxnylqdkeqpz"
 
 [data]
 email = {{ $email | quote }}
 git_email = "mrfiregem@protonmail.ch"
+
+[data.xdg_base]
+config = {{ list .chezmoi.homeDir ".config" | join "/" | quote }}
+data = {{ list .chezmoi.homeDir ".local" "share" | join "/" | quote }}
+state = {{ list .chezmoi.homeDir ".local" "state" | join "/" | quote }}
+cache = {{ list .chezmoi.homeDir ".cache" | join "/" | quote }}
