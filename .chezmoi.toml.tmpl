@@ -5,7 +5,7 @@
 encryption = "age"
 
 [age]
-identity = "{{ .xdg_base.config }}/age/chezmoi.txt"
+identity = {{ list $confdir "age" "chezmoi.txt" | join $pathsep | squote }}
 recipient = "age1vcp9a6rnmv9njl4jdadvf2f9j9ynynpmrr99a3fyxr7rxgvxnylqdkeqpz"
 
 [data]
