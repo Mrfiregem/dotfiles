@@ -1,4 +1,6 @@
 {{ $email := promptString "Email" -}}
+{{ $pathsep := eq .chezmoi.os "windows" | ternary `\\` "/" -}}
+{{ $confdir := list .chezmoi.homeDir ".config" | join $pathsep -}}
 
 encryption = "age"
 
@@ -9,9 +11,10 @@ recipient = "age1vcp9a6rnmv9njl4jdadvf2f9j9ynynpmrr99a3fyxr7rxgvxnylqdkeqpz"
 [data]
 email = {{ $email | quote }}
 git_email = "mrfiregem@protonmail.ch"
+pathsep = {{$pathsep | squote }}
 
 [data.xdg_base]
-config = {{ list .chezmoi.homeDir ".config" | join "/" | quote }}
-data = {{ list .chezmoi.homeDir ".local" "share" | join "/" | quote }}
-state = {{ list .chezmoi.homeDir ".local" "state" | join "/" | quote }}
-cache = {{ list .chezmoi.homeDir ".cache" | join "/" | quote }}
+config = {{ $confdir | squote }}
+data = {{ list .chezmoi.homeDir ".local" "share" | join $pathsep | squote }}
+state = {{ list .chezmoi.homeDir ".local" "state" | join $pathsep | squote }}
+cache = {{ list .chezmoi.homeDir ".cache" | join $pathsep | squote }}
