@@ -1,5 +1,5 @@
 {{ $email := promptString "Email" -}}
-{{ $pathsep := eq .chezmoi.os "windows" | ternary `\\` "/" -}}
+{{ $pathsep := eq .chezmoi.os "windows" | ternary `\` "/" -}}
 {{ $confdir := list .chezmoi.homeDir ".config" | join $pathsep -}}
 
 encryption = "age"
