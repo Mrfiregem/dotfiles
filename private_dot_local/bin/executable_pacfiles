@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pacman -Ql "$1" | sed '\:/$:d'

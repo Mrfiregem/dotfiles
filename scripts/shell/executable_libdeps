@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "$1" | grep -q '\.pkg\.tar.*$' || {
+  echo "${1}: Not a package." >&2
+  exit 1
+}
+
+for file in $(find-libdeps "$1" | sed 's/=.*//'); do
+  paru -Fq "$file" | sed '1q' | xargs printf '%s -> %s\n' "$file"
+done | sort -u

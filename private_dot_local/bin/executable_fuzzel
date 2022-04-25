@@ -1,0 +1,12 @@
+#!/bin/sh
+
+exec /usr/bin/fuzzel \
+  --font='sans-serif' \
+  --icon-theme='Papirus-Dark' \
+  --terminal='/usr/bin/foot' \
+  --background='1f1f28ff' \
+  --text-color='dcd7baff' \
+  --selection-color='2d4f67ff' \
+  --selection-text-color='c8c093ff' \
+  --border-color='76946aff' #\
+  # --launch-prefix='riverctl spawn'

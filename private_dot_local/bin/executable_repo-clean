@@ -1,0 +1,21 @@
+#!/bin/sh
+
+repo=${RCREPOPATH:-/usr/local/repo/custom/custom.db.tar.gz}
+repo_name=$(echo "$repo" | awk -F '/' '{print $(NF-1)}')
+
+list=$(pacman -Sl "$repo_name" | sed '/\[installed\]/d' | cut -d ' ' -f 2)
+
+if [ -n "$list" ]; then
+  printf 'Remove packages: %s? [Y/n]: ' "$(echo "$list" | tr '\n' ' ')"
+  read -r ans
+  case "$ans" in
+    [yY]*|'')
+      printf '%s\n' "$list" | xargs repo-remove -s "$repo"
+      ;;
+    *)
+      exit 1
+      ;;
+  esac
+else
+  exit 2
+fi
