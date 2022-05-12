@@ -11,11 +11,9 @@ riverctl map normal $mod+Shift E exit
 
 # start program on keypress
 riverctl map normal $mod Return spawn 'foot'                                    # terminal emulator
-riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl -term xterm -nofs' # launcher
-riverctl map normal $mod Escape spawn 'nwg-bar'                                 # power menu
+riverctl map normal $mod+Shift Return spawn 'bemenu-run' # launcher
 riverctl map normal $mod period spawn 'bemoji -t'                               # insert emoji
-riverctl map normal $mod+Shift period spawn 'bemoji -e | tr -d "\n" | wl-copy'  # copy emoji
-riverctl map normal None Print spawn 'iriver'                                   # copy emoji
+riverctl map normal None Print spawn 'iriver'                                   # capture screen
 
 # view focus
 riverctl map normal $mod Z zoom
@@ -111,17 +109,9 @@ riverctl float-filter-add title 'Sharing Indicator'
 riverctl xcursor-theme capitaine-cursors 24
 
 # program autostart
-riverctl spawn 'systemctl --user import-environment DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE'
-riverctl spawn 'hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE'
-riverctl spawn '/usr/lib/xdg-desktop-portal-gtk'
 riverctl spawn 'wpaperd'
 riverctl spawn 'mako'
 riverctl spawn 'yambar'
-declare -a dex_args=(
-  /etc/xdg/autostart/gnome-keyring-{pkcs11,secrets,ssh}.desktop
-  /etc/xdg/autostart/org.fcitx.Fcitx5.desktop)
-riverctl spawn "dex ${dex_args[*]}"
-riverctl spawn 'swayidle -w'
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.

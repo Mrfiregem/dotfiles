@@ -8,13 +8,10 @@ set $up k
 set $right l
 # Apps
 set $term foot
-set $menu nwg-drawer -ovl -nofs
+set $menu bemenu-run
 
 # ==] Output configuration [==
 exec wpaperd
-
-# ==] Idle configuration [==
-exec swayidle -w
 
 # ==] Input configuration [==
 # `man 5 sway-input`
@@ -42,8 +39,7 @@ client.urgent           #c34043    #e46876 $text   #ff9e3b    #c34043
 bindsym $mod+Return exec $term
 # Launcher
 bindsym $mod+Shift+Return exec $menu
-# Power menu
-bindsym $mod+Escape exec nwg-bar
+# Emoji menu
 bindsym $mod+Period exec 'bemoji -t'
 
 # Kill focused window
@@ -127,8 +123,5 @@ bindsym $mod+F11 mode "passthrough"
 
 # ==] Status Bar [==
 exec yambar -c "$XDG_CONFIG_HOME/yambar/sway.yml"
-
-exec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE"
-exec "hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY MOZ_DBUS_REMOTE"
 
 include /etc/sway/config.d/*
