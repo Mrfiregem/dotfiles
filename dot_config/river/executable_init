@@ -10,10 +10,10 @@ riverctl map normal $mod Q close
 riverctl map normal $mod+Shift E exit
 
 # start program on keypress
-riverctl map normal $mod Return spawn 'foot'                                    # terminal emulator
+riverctl map normal $mod Return spawn 'foot'             # terminal
 riverctl map normal $mod+Shift Return spawn 'bemenu-run' # launcher
-riverctl map normal $mod period spawn 'bemoji -t'                               # insert emoji
-riverctl map normal None Print spawn 'iriver'                                   # capture screen
+riverctl map normal $mod period spawn 'bemoji -t'        # emoji
+riverctl map normal None Print spawn 'iriver'            # printscreen
 
 # view focus
 riverctl map normal $mod Z zoom
@@ -116,6 +116,12 @@ riverctl input 1133:49284:Logitech_G203_Prodigy_Gaming_Mouse pointer-accel 0.3
 riverctl spawn 'wpaperd'
 riverctl spawn 'mako'
 riverctl spawn 'yambar'
+
+# Read from ~/.config/autostart/*.desktop files
+riverctl spawn 'autostart'
+
+# Fix slow-to-open GTK programs
+riverctl spawn 'dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK'
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.

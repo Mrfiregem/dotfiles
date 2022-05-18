@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+declare -a search_paths=(
+	"${XDG_CONFIG_HOME:-$HOME/.config}/autostart/"
+	# /etc/xdg/autostart/
+)
+
+join_paths() {
+	local IFS=$1
+	shift
+	echo "$*"
+}
+
+exec dex --autostart --search-paths "$(join_paths : "${search_paths[@]}")" --term "${TERMINAL:-foot}" "$@"
