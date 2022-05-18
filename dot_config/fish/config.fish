@@ -12,10 +12,10 @@ if status is-interactive
     abbr -a -g gd gallery-dl
 
     #-- Trash-CLI
-    abbr -a -g gp garbage put
-    abbr -a -g gl garbage list
-    abbr -a -g ge garbage empty
-    abbr -a -g gr garbage restore
+    abbr -a -g tp trash-put
+    abbr -a -g tl trash-list
+    abbr -a -g te trash-empty
+    abbr -a -g tr trash-restore
 end
 
 # vim: ft=fish
