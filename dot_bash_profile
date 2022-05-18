@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Inherit systemd user environment
+set -a
+eval <<EOF
+$(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
+EOF
+set +a
+
+# Use gpg-agent as an ssh-agent
+unset SSH_AGENT_PID
+export SSH_AUTH_SOCK=${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh
