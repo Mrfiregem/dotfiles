@@ -1,6 +1,6 @@
 #!/bin/sh
 
-repo=${RCREPOPATH:-/usr/local/repo/custom/custom.db.tar.gz}
+repo=${RCREPOPATH:-/var/lib/repo/custom/custom.db.tar.gz}
 repo_name=$(echo "$repo" | awk -F '/' '{print $(NF-1)}')
 
 list=$(pacman -Sl "$repo_name" | sed '/\[installed\]/d' | cut -d ' ' -f 2)
@@ -10,7 +10,7 @@ if [ -n "$list" ]; then
   read -r ans
   case "$ans" in
     [yY]*|'')
-      printf '%s\n' "$list" | xargs repo-remove -s "$repo"
+      printf '%s\n' "$list" | xargs repo-remove -s -k firegem "$repo"
       ;;
     *)
       exit 1

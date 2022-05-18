@@ -1,10 +1,3 @@
-if status is-login
-    eval (ssh-agent -c)
-end
-
-set -x VISUAL nvim
-set -x EDITOR $VISUAL
-
 if status is-interactive
     source ~/.config/fish/colorschemes/kanagawa.fish
 
