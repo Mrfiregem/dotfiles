@@ -7,4 +7,5 @@ source <(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-g
 set +a
 
 # Use gnome-keyring as the ssh-agent
-export SSH_AUTH_SOCK=/run/user/1001/keyring/ssh
+eval "$(gnome-keyring-daemon --start)"
+export SSH_AUTH_SOCK
