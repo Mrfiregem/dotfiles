@@ -1,4 +1,3 @@
-local ts_configs = require("nvim-treesitter.parsers").get_parser_configs()
 local ts_setup = require("nvim-treesitter.configs")
 
 ts_setup.setup {

@@ -6,9 +6,8 @@ return require("packer").startup(function(use)
   use("alaviss/nim.nvim")
   use("alker0/chezmoi.vim")
   use("gpanders/vim-scdoc")
-  use("jamespeapen/swayconfig.vim")
-  use("lervag/vimtex")
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use("https://git.sr.ht/~sircmpwn/hare.vim")
   use("https://tildegit.org/sloum/gemini-vim-syntax")
   use("teal-language/vim-teal")
   use("ziglang/zig.vim")
@@ -24,7 +23,7 @@ return require("packer").startup(function(use)
     "romgrk/barbar.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   }
-  use("stevearc/dressing.nvim")
+  -- use("stevearc/dressing.nvim")
 
   -- [ Feature Plugins ]
   use {
