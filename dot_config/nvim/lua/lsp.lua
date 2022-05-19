@@ -53,7 +53,7 @@ null_ls.setup {
     nl_format.xmllint,
     nl_format.zigfmt,
     -- Diagnostics
-    nl_diag.flake8,
+    -- nl_diag.flake8,
     nl_diag.shellcheck,
     nl_diag.teal,
     -- Code actions
