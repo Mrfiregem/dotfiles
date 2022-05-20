@@ -4,12 +4,14 @@ if status is-interactive
     # Abbreviations
     #-- Editor
     abbr -a -g v $VISUAL
+    abbr -a -g ve $EDITOR
 
     #-- Other Programs
     abbr -a -g ls exa
     abbr -a -g ch chezmoi
     abbr -a -g lz lazygit
     abbr -a -g gd gallery-dl
+    abbr -a -g tg topgrade
 
     #-- Trash-CLI
     abbr -a -g tp trash-put
