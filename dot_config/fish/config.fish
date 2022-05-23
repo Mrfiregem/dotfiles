@@ -17,7 +17,7 @@ if status is-interactive
     abbr -a -g tp trash-put
     abbr -a -g tl trash-list
     abbr -a -g te trash-empty
-    abbr -a -g tr trash-restore
+    abbr -a -g tt trash-restore
 end
 
 # vim: ft=fish
