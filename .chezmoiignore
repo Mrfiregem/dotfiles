@@ -1,8 +1,3 @@
-{{ if (eq .chezmoi.os "windows") -}}
-.config/
-scripts/
-{{ end -}}
-
 {{ if (ne .chezmoi.os "linux") -}}
 .profile
 .config/environment.d/
