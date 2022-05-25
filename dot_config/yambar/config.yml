@@ -117,7 +117,7 @@ bar:
                     text: ""
                 - string: *battxt
     - network:
-        name: "wlp5s0"
+        name: "wlan0"
         anchors:
           network_text: &nettxt { text: "{name}" }
         content:
