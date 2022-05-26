@@ -10,10 +10,11 @@ riverctl map normal $mod Q close
 riverctl map normal $mod+Shift E exit
 
 # start program on keypress
-riverctl map normal $mod Return spawn 'foot'             # terminal
-riverctl map normal $mod+Shift Return spawn 'bemenu-run' # launcher
-riverctl map normal $mod period spawn 'bemoji -t'        # emoji
-riverctl map normal None Print spawn 'iriver'            # printscreen
+riverctl map normal $mod Return spawn 'foot' # terminal
+riverctl map normal $mod+Shift Return spawn 'nwg-drawer -ovl -nofs' # launcher
+riverctl map normal $mod period spawn 'bemoji -t' # emoji
+riverctl map normal None Print spawn 'iriver' # printscreen
+riverctl map normal $mod Escape spawn 'nwg-bar' # logout menu
 
 # view focus
 riverctl map normal $mod Z zoom
