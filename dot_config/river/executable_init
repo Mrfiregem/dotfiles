@@ -106,7 +106,7 @@ riverctl float-filter-add app-id 'anki'
 riverctl float-filter-add title 'Sharing Indicator'
 
 # Set default cursor theme
-riverctl xcursor-theme capitaine-cursors 24
+riverctl xcursor-theme capitaine-cursors-light 24
 
 # Input configuration
 riverctl input 1133:49284:Logitech_G203_Prodigy_Gaming_Mouse accel-profile flat
