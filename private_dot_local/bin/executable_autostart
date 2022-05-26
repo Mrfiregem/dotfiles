@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 declare -a search_paths=(
-	"${XDG_CONFIG_HOME:-$HOME/.config}/autostart/"
+	"${XDG_CONFIG_HOME:-$HOME/.config}/dex-autostart/"
 	# /etc/xdg/autostart/
 )
 
