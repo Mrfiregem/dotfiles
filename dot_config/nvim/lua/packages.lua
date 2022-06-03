@@ -5,6 +5,7 @@ return require("packer").startup(function(use)
   -- [ Syntax/language plugins ]
   use("alaviss/nim.nvim")
   use("alker0/chezmoi.vim")
+  use("ErichDonGubler/vim-nushell")
   use("gpanders/vim-scdoc")
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use("https://git.sr.ht/~sircmpwn/hare.vim")
