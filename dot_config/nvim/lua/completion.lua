@@ -1,12 +1,6 @@
 local cmp = require("cmp")
-local luasnip = require("luasnip")
 
 cmp.setup {
-  snippet = {
-    expand = function(args)
-      require("luasnip").lsp_expand(args.body)
-    end,
-  },
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
@@ -21,7 +15,6 @@ cmp.setup {
   sources = cmp.config.sources {
     { name = "nvim_lua" }, -- For neovim's Lua API
     { name = "nvim_lsp" }, -- For LSP completions
-    { name = "luasnip" }, -- For snippets
     { name = "buffer" },
   },
 }
