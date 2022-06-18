@@ -18,14 +18,6 @@ source = "github"
 github = "fox0430/moe"
 use_latest_release = true
 
-[taplo-cli]
-source = "cratesio"
-
-[wlopm]
-source = "git"
-git = "https://git.sr.ht/~leon_plickat/wlopm"
-use_commit = true
-
 [wpaperd]
 source = "github"
 github = "danyspin97/wpaperd"
