@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+app=$(flatpak list | fzf --query="$1" | cut -f 2)
+shift
+
+if [[ -n $app ]]; then
+	read -rp "Really uninstall ${app}? [Y/n]: " ans
+	case "$ans" in
+	[Yy]* | '')
+		exec flatpak uninstall --delete-data --assumeyes "$@" -- "$app"
+		;;
+	[Nn]*)
+		echo "User changed their mind. Exiting."
+		exit 0
+		;;
+	*)
+		echo "Unknown answer. Exiting." 1>&2
+		exit 2
+		;;
+	esac
+else
+	echo "No app-id selected. Exiting." 1>&2
+	exit 1
+fi
